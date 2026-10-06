@@ -1,0 +1,336 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+:root {
+  --orange: #ec5c35cc;
+}
+
+.tca_button {
+  font-family: "Figtree";
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+a label {
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* @media (max-width: 768px) {
+  main {
+    height: 500px;
+  }
+} */
+
+.content {
+  display: grid;
+  column-gap: 7vw;
+  grid-area: 1/1/2/2;
+  grid-template-areas:
+    "...        img-main img-main ..."
+    "...        img-main img-main ..."
+    "img-left   img-main img-main title-right"
+    "img-left   img-main img-main img-right"
+    "title-left img-main img-main img-right"
+    "...        img-main img-main img-right";
+  grid-template-columns: 18% 1fr 1fr 18%;
+  grid-template-rows: 5.5rem 15vh auto 1fr auto 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content__img {
+  background-position: 50% 20%;
+  background-size: cover;
+}
+.menu__title {
+  width: 185px;
+  height: 48px;
+}
+
+.content__img--right {
+  grid-area: img-right;
+}
+
+.content__title--right {
+  grid-area: title-right;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  bottom: 2rem;
+  /* left: 3rem;
+  right: 3rem; */
+  display: grid;
+  grid-template-areas:
+    "top"
+    "content";
+  grid-template-rows: 3rem 1fr;
+  z-index: 110;
+  font-family: "Figtree";
+  height: 200px;
+  width: 100vw;
+  padding: 0 3rem;
+}
+.menu_home {
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 0rem;
+    bottom: 1rem;
+    /* left: 0rem;
+    right: 0rem; */
+    display: grid;
+    grid-template-areas:
+      "top"
+      "content";
+    grid-template-rows: 3rem 1fr;
+    z-index: 110;
+    font-family: "Figtree";
+    height: 200px;
+    width: 100vw;
+    padding: 0;
+  }
+}
+.menu__top,
+.menu__content {
+  display: grid;
+}
+
+.menu__top {
+  align-items: center;
+  /* background-color: var(--orange); */
+  border-radius: 2rem;
+  grid-template-areas: "title ... top-nav ... side";
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+  height: 70px;
+  transition: border-radius 1s ease-in-out;
+}
+
+/* #menu-toggle:checked + main .menu__top {
+  border-radius: 2rem 2rem 0rem 0rem;
+  transition: border-radius 0.7s ease-in-out;
+} */
+.menu__nav-top {
+  height: calc(1rem + 4px);
+  overflow: hidden;
+  min-width: max-content;
+  /* margin-left: 2vw; */
+}
+@media (min-width: 1600px) {
+  .menu__nav-top {
+    grid-area: top-nav;
+    height: calc(1rem + 4px);
+    overflow: hidden;
+    min-width: max-content;
+    margin-left: 0;
+  }
+}
+.menu__nav-top a {
+  margin: 0 1rem;
+}
+
+.menu__link {
+  display: inline-block;
+  position: relative;
+  font-family: "Figtree";
+}
+
+.menu__link:last-child {
+  margin-right: 0;
+}
+
+.menu__link::before {
+  bottom: 0;
+  background-color: #000;
+  content: "";
+  height: 2px;
+  position: absolute;
+  transition: width 0.2s ease;
+  width: 0;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+}
+
+.menu__side {
+  grid-area: side;
+  justify-self: end;
+  min-width: max-content;
+  font-family: "Figtree";
+}
+
+.menu__content-wrap {
+  overflow: hidden;
+}
+
+.menu__content {
+  background-color: var(--orange);
+  border-radius: 0 0 2rem 2rem;
+  grid-template-areas:
+    "...     ...     nav-content back   ..."
+    "tagline tagline social      social social";
+  grid-template-rows: 1fr 10vh;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 2rem 1rem 2rem;
+}
+
+.menu__nav-content {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: nav-content;
+  margin-top: 5vh;
+}
+
+.column {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  min-width: 15ch;
+}
+
+.column__title {
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.menu__back {
+  align-self: start;
+  grid-area: back;
+  height: 200px;
+  margin-top: calc(5vh - 0.5rem);
+  transition: margin-top 0.2s ease;
+}
+
+.menu__back:hover {
+  margin-top: calc(5vh - 1rem);
+}
+
+.menu__social {
+  align-items: end;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-area: social;
+  justify-self: end;
+}
+
+.menu__social-link {
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+.menu__social-link:hover {
+  opacity: 1;
+}
+
+.cover-wrap,
+.cover {
+  display: grid;
+  grid-area: 1/1/2/2;
+  z-index: 101;
+}
+
+.cover-inner {
+  /* background-image: url(../heroBackgroubd.jpeg); */
+  background-position: center;
+  background-size: cover;
+}
+
+/* #menu-toggle {
+  position: fixed;
+  visibility: hidden;
+} */
+
+/* Start of Animations */
+.cover-wrap {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.cover {
+  overflow: hidden;
+  transform: translateY(-100%);
+  transition: all 0.5s ease 0.4s;
+}
+
+.cover-inner {
+  transform: translateY(100%);
+  transition: all 0.5s ease 0.4s;
+}
+
+/* #menu-toggle:checked + main .cover-wrap {
+  transform: scale(1);
+} */
+
+/* #menu-toggle:checked + main .cover,
+#menu-toggle:checked + main .cover-inner {
+  transform: translateY(0);
+  transition: all 0.5s ease 0s;
+} */
+
+.content__img {
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+/* #menu-toggle:checked + main .content__img--left,
+#menu-toggle:checked + main .content__img--right {
+  transform: translateY(-10rem);
+} */
+
+.menu__content {
+  transform: translateY(-100%);
+  transition: all 0.5s ease 0s;
+}
+
+/* #menu-toggle:checked + main .menu__content {
+  transform: translateY(0);
+  transition: all 0.5s ease 0.4s;
+} */
+
+.content__title {
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+/* #menu-toggle:checked + main .content__title--left,
+#menu-toggle:checked + main .content__title--right {
+  transform: translateY(10rem);
+} */
+
+.back_button {
+  opacity: 0;
+  transform: translateY(400%);
+  transition: all 0.5s ease;
+}
+
+/* #menu-toggle:checked + main .back_button {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease;
+} */

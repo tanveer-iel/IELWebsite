@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Detail - IEL</title>
+  <meta name="description" content="Smart moves. Sharp insights. Financial freedom—your way. From your first stock pick to your next big acquisition—we're in it with you. IEL brings bespoke brokerage, laser-focused advisory, and strategy consulting under one roof" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Assets/finalNavbar/navbar.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Slick CSS (if used elsewhere on site) -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    .blog-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .blog-content h3 {
+      font-weight: 600;
+      font-size: 1.125rem; /* 18px */
+      color: #000;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .blog-content p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .blog-content strong {
+      font-weight: 600;
+    }
+    .blog-content em {
+      font-style: italic;
+    }
+    .blog-content ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+     #typed-text span {
+        display: block;
+      }
+      .footer {
+        /* Matches the height of the first div to create overlap */
+        background: linear-gradient(180deg, #0f0d17 0%, #191535 100%);
+      }
+      .bg-overlay {
+        position: relative;
+        z-index: 10;
+        top: -150px;
+      }
+  </style>
+</head>
+<body>
+
+    <!-------------------------Hero Section------------------------->
+    <div>
+      <main class="h-[110px] xl:h-[110px]">
+        <!-- <div class="content h-[338px] md:h-[338px]">
+          <div class="relative w-[100vw] h-[338px]">
+            <div class="container mx-auto">
+              <div
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                style="
+                  background: linear-gradient(
+                    93.15deg,
+                    #0e0c15 0%,
+                    #1a1538 100%
+                  );
+                "
+              ></div>
+              <div
+                class="relative flex flex-col-reverse md:flex-row py-[40px] md:py-[60px] px-[24px] md:px-[42px] lg:px-16 justify-center md:justify-between item-center mt-[10vh] md:mt-[15vh] 3xl:mt-[10vh]"
+              >
+                <div
+                  class="relative text-white w-full flex flex-col justify-center items-center"
+                  style="z-index: 105"
+                >
+                  <h1
+                    id="typed-text"
+                    class="font-[600] text-[30px] md:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
+                  >
+                    Get $1000 for a limited time, offer definitely needed!
+                  </h1>
+                  <p class="font-[400] text-[16px] leading-[24px] mt-[12px]">
+                    The difference between hoping and knowing? Having IEL in
+                    your corner.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="menu h-[80px] pt-[10px] bg-white">
+          <nav class="top-0 left-0 w-full z-50">
+            <div
+              class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
+            >
+              <div class="flex-shrink-0">
+                <a href="index.html">
+                  <img
+                    src="IEL Assets/partners/BlackLogoSvg.svg"
+                    alt="Change Agency Logo"
+                    class="h-[52px] w-[103px]"
+                  />
+                </a>
+              </div>
+              <!-- <div class="flex-shrink-0 xl:hidden flex items-center">
+                <a href="index.html">
+                  <img
+                    src="IEL Assets/new_logo.png"
+                    alt="Change Agency Logo"
+                    class="h-[50px] w-[100px]"
+                  />
+                </a>
+              </div> -->
+
+              <div class="hidden xl:flex items-center space-x-10">
+                <!-- <a
+                  href=""
+                  class="text-white text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  WHAT WE OFFER
+                </a> -->
+                <div class="relative group">
+                  <button
+                    class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  >
+                    WHAT WE OFFER
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    class="absolute left-0 w-48 bg-black rounded-lg shadow-xl hidden group-hover:block z-10"
+                    style="backdrop-filter: blur(4px)"
+                  >
+                    <a
+                      href="BrokerageService.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Brokerage
+                    </a>
+
+                    <a
+                      href="StrategyConsulting.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Strategy Consulting
+                    </a>
+
+                    <a
+                      href="FinancialAdvisory.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Financial Advisory
+                    </a>
+
+                    <a
+                      href="RealStateAdvisory.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Real Estate
+                    </a>
+
+                    <a
+                      href="FintechService.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Fintech Solutions
+                    </a>
+                  </div>
+                </div>
+                <div class="relative group">
+                  <button
+                    class="text-balck text-base font-[600] uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  >
+                    INVESTORS INFORMATION
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    class="absolute left-0 w-48 bg-black rounded-lg shadow-xl hidden group-hover:block z-10"
+                    style="backdrop-filter: blur(4px)"
+                  >
+                    <a
+                      href="Regulatory.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Regulatory Information
+                    </a>
+                    <a
+                      href="NewReport.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Financial Statements
+                    </a>
+                    <a
+                      href="Investor_education.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Investor Education
+                    </a>
+                  </div>
+                </div>
+                 <a
+                  href="Research.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  RESEARCH REPORTS
+                </a>
+                <a
+                  href="About.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  ABOUT US
+                </a>
+                <a
+                  href="Resources.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  LEARN
+                </a>
+                <a
+                  href="Contact.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  CONTACT US
+                </a>
+
+                <!-- <div class="flex items-center">
+                  <a
+                    class="bg-white py-3 px-8 rounded-[4px] text-white font-[700] text-[16px] uppercase"
+                    href="https://meetings.hubspot.com/jessica-brennan"
+                    target="_blank"
+                  >
+                    GET A CONSULTATION
+                  </a>
+                </div> -->
+              </div>
+              <div class="block xl:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                  <img
+                    src="IEL Assets/hamburger_button.png"
+                    alt=""
+                    class="w-[24px] h-[24px]"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div
+              id="mobile-menu"
+              class="hidden xl:hidden bg-white px-4 py-6 rounded-[6px]"
+            >
+              <hr />
+              <div class="flex flex-col space-y-4 mt-[20px]">
+                <div>
+                  <button
+                    id="resources-toggle"
+                    class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex justify-between items-center w-full"
+                  >
+                    <span class="flex items-center">
+                      <span
+                        ><img
+                          src="IEL Assets/what_we_offer_icon.png"
+                          alt=""
+                          class="w-[16px] h-[16px] me-4"
+                      /></span>
+                      What We Offer
+                    </span>
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    id="resources-dropdown"
+                    class="hidden mt-2 w-full bg-[#FFFFFF1A] py-4 rounded-lg"
+                  >
+                    <a
+                      href="BrokerageService.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Brokerage</a
+                    >
+                    <a
+                      href="StrategyConsulting.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Strategy Consulting</a
+                    >
+                    <a
+                      href="FinancialAdvisory.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                      >Financial Advisory
+                    </a>
+
+                    <a
+                      href="RealStateAdvisory.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                      >Real Estate
+                    </a>
+
+                    <a
+                      href="FintechService.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                      >FinTech Solution
+                    </a>
+                  </div>
+                </div>
+                <!-- <a
+                  href="whoweare.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  ><span
+                    ><img
+                      src="IEL Assets/investor_icon.png"
+                      alt=""
+                      class="w-[16px] h-[16px] me-4"
+                  /></span>
+                  INVESTORS INFORMATION</a
+                > -->
+                <div>
+                  <button
+                    id="investor-toggle"
+                    class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex justify-between items-center w-full"
+                  >
+                    <span class="flex items-center">
+                      <span
+                        ><img
+                          src="IEL Assets/what_we_offer_icon.png"
+                          alt=""
+                          class="w-[16px] h-[16px] me-4"
+                      /></span>
+                      INVESTORS INFORMATION
+                    </span>
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    id="investor-dropdown"
+                    class="hidden mt-2 w-full bg-[#FFFFFF1A] py-4 rounded-lg"
+                  >
+                    <a
+                      href="Regulatory.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Regulatory Information</a
+                    >
+                    <a
+                      href="NewReport.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Financial Statements</a
+                    >
+                    <a
+                      href="Investor_education.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Investor Education</a
+                    >
+                  </div>
+                </div>
+                 <a
+                  href="Research.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                >
+                  <span
+                    ><img
+                      src="IEL Assets/about_us_icon.png"
+                      alt=""
+                      class="w-[16px] h-[16px] me-4"
+                  /></span>
+                  RESEARCH REPORTS</a
+                >
+                <a
+                  href="About.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                >
+                  <span
+                    ><img
+                      src="IEL Assets/about_us_icon.png"
+                      alt=""
+                      class="w-[16px] h-[16px] me-4"
+                  /></span>
+                  ABOUT US</a
+                >
+                <a
+                  href="Resources.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  ><span
+                    ><img
+                      src="IEL Assets/learn_icon.png"
+                      alt=""
+                      class="w-[16px] h-[16px] me-4"
+                  /></span>
+                  LEARN</a
+                >
+                <a
+                  href="Contact.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  ><span
+                    ><img
+                      src="IEL Assets/contact_icon.png"
+                      alt=""
+                      class="w-[16px] h-[16px] me-4"
+                  /></span>
+                  CONTACT US</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
+      </main>
+    </div>
+
+  <!-- ─── BLOG CONTENT (DYNAMIC) ───────────────────────────────────────── -->
+  <div class="mt-[28px] md:mt-[40px] mx-[16px] md:mx-[7vw]">
+    <div class="w-full max-w-[1400px] mx-auto">
+
+      <div id="loading" class="text-center py-20 text-lg text-gray-600">
+        Loading article...
+      </div>
+
+      <div id="error" class="hidden text-center py-20 text-red-600 text-lg">
+        Article not found or failed to load.<br>
+        <a href="Resources.html" class="text-blue-600 underline mt-4 inline-block">Back to blogs</a>
+      </div>
+
+      <article id="blog-detail" class="hidden">
+        <img id="blog-hero"
+             class="h-[400px] w-full object-cover"
+             alt="Blog featured image" />
+
+        <h2 id="blog-title"
+            class="mt-[24px] font-[600] leading-[100%] text-[20px] md:text-[40px]">
+        </h2>
+
+        <!-- Author & Date (uncomment when you add author field) -->
+        <!--
+        <div class="mt-[16px] flex items-center">
+          <span><img src="IEL Assets/writer.jpg" alt="" class="w-[20px] h-[20px] rounded-full" /></span>
+          <span class="ms-[5px] font-[500] text-[16px] leading-[17px]" id="blog-author"></span>
+          <span class="ms-[12px]">
+            <img src="IEL Assets/detail_data_icon.png" alt="" class="w-[14px] h-[14px]" />
+          </span>
+          <time id="blog-date" class="ms-[5px] font-[400] text-[14px] leading-[125%]"></time>
+        </div>
+        -->
+
+        <div id="blog-body"
+             class="mt-[40px] font-[500] text-[#6E6E6E] text-[16px] leading-[150%] blog-content">
+          <!-- Dynamic content loaded here -->
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ──────────────────────────────────────────────────────── -->
+  <div class="footer mt-[80px]">
+    <div class="rounded-b-2xl mx-2 bg-transparent">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 pt-[60px] md:pt-[100px] mx-10 pb-[64px] justify-between">
+          <div class="col-span-2 md:col-span-2 lg:col-span-2 pt-4 px-4 md:px-10">
+            <div class="flex">
+              <img src="IEL Assets/partners/whiteLogoSvg.svg" alt="IEL Logo" class="w-[65px] md:w-[145px] h-[40px] md:h-[70px]" />
+            </div>
+          </div>
+
+          <div class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[24px] md:mt-0">
+            <p class="text-[14px] font-[900] mt-[16px] leading-[20px] text-[#FFFFFF]">Main Navigation</p>
+            <ul class="text-[16px] font-[500] mt-[16px] leading-loose">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About IEL</a></li>
+              <li><a href="OpenAccount.html">Open Account</a></li>
+              <li><a href="OpenAccount.html#Faqs">FAQs</a></li>
+              <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[24px] md:mt-0">
+            <p class="text-[14px] font-[900] mt-[16px] leading-[20px] text-[#ffffff]">Useful Links</p>
+            <ul class="text-[16px] font-[500] mt-[16px] leading-loose">
+              <li><a href="Regulatory.html">Regulatory Information</a></li>
+              <li><a href="About.html#Associated_Company">Associated Companies</a></li>
+              <li><a href="Resources.html#related_forms">Downloads</a></li>
+              <li><a href="NewReport.html">Reports & Statements</a></li>
+              <li><a href="">Investor Complaints</a></li>
+              <li><a href="https://www.psx.com.pk/psx/resources-and-tools/investors/investors-complaints" target="_blank">PSX Complaint Mgmnt</a></li>
+              <li><a href="https://sdms.secp.gov.pk/" target="_blank">SECP Complaint Mgmnt</a></li>
+              <li><a href="Privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[24px] md:mt-0">
+            <p class="text-[14px] font-[900] mt-[16px] leading-[20px] text-[#ffffff]">Contact</p>
+            <ul class="text-[16px] font-[500] mt-[16px] leading-loose">
+              <li><a href="">+92-4235741714-15</a></li>
+              <li><a href="">+92-4235692606</a></li>
+              <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@iel.net.pk" target="_blank">info@iel.net.pk</a></li>
+            </ul>
+            <div class="leading-[130%]">
+              <p class="text-[16px] font-[600] mt-[16px]">
+                30 Cricketers Colony, 3rd floor, NETSOL Avenue, Ghazi Interchange, Ring Road, Lahore
+              </p>
+              <p class="text-[16px] font-[600] mt-[16px]">
+                Room# 134, 3rd Floor, KSE Building, Karachi
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-[7vw] text-center pb-10">
+          <h3 class="text-[#FFFFFF]">Smart Stock System — Our Backoffice Software Vendor</h3>
+          <p class="text-[#535862]">
+            At our brokerage, we leverage the Smart Stock System as our trusted backoffice software solution. This system helps ensure efficient trade processing, seamless settlements, and accurate client account management, enabling us to deliver a secure and reliable trading experience for all our customers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white mx-[7vw]">
+    <img src="IEL Assets/disclaimer.png" alt="Disclaimer" />
+  </div>
+
+  <!-- Scripts -->
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+  <!-- Supabase + Dynamic Loading -->
+  <script>
+  const supabaseUrl = "https://bfxmfaakufrmzcxhtgfw.supabase.co";
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmeG1mYWFrdWZybXpjeGh0Z2Z3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4MTQzMTIsImV4cCI6MjA3NTM5MDMxMn0.qtNn0qXNhn8ol8fTSb2Hp9nQkYfFA2Y_Zec4LuISPZQ";
+
+let supabaseClient = null;
+
+function initSupabase() {
+  if (typeof supabase === "undefined") {
+    console.warn("supabase global not ready yet, waiting...");
+    setTimeout(initSupabase, 100);
+    return;
+  }
+
+  const { createClient } = supabase;
+  supabaseClient = createClient(supabaseUrl, supabaseKey);
+  console.log("Supabase client initialized!", supabaseClient);
+}
+
+initSupabase();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogId = urlParams.get("id");
+
+    async function loadBlogDetail() {
+      if (!blogId) {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error").classList.remove("hidden");
+        return;
+      }
+
+      const loading = document.getElementById("loading");
+      const errorEl = document.getElementById("error");
+      const detail  = document.getElementById("blog-detail");
+
+      try {
+        const { data: blog, error } = await supabaseClient
+          .from("blogs")
+          .select("title, img, desc, created_at")
+          .eq("id", blogId)
+          .single();
+
+        if (error || !blog) throw error;
+
+        // Hero image
+        const heroImg = document.getElementById("blog-hero");
+        heroImg.src = blog.img || "https://via.placeholder.com/1400x400?text=No+Image";
+        heroImg.alt = blog.title || "Blog image";
+        heroImg.onerror = () => {
+          heroImg.src = "https://via.placeholder.com/1400x400?text=Image+Error";
+        };
+
+        // Title
+        document.getElementById("blog-title").textContent = blog.title || "Untitled";
+
+        // Body (supports HTML from rich text editor)
+        document.getElementById("blog-body").innerHTML = blog.desc || "<p>No content available.</p>";
+
+        // Date
+        if (blog.created_at) {
+          const date = new Date(blog.created_at);
+          // If you want to show date → add element with id="blog-date"
+          // document.getElementById("blog-date").textContent = date.toLocaleDateString("en-US", {
+          //   year: "numeric", month: "long", day: "numeric"
+          // });
+        }
+
+        loading.style.display = "none";
+        detail.classList.remove("hidden");
+
+        document.title = `${blog.title} - IEL Blog`;
+
+      } catch (err) {
+        console.error(err);
+        loading.style.display = "none";
+        errorEl.classList.remove("hidden");
+      }
+    }
+
+    loadBlogDetail();
+  </script>
+
+   <script src="index.js"></script>
+</body>
+</html>
