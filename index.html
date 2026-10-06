@@ -1,0 +1,3902 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Integrated Equities Limited</title> -->
+    <title>IEL | Stock Brokerage &amp; Financial Advisory in Pakistan</title>
+    <meta
+      name="description"
+      content="Integrated Equities Limited (IEL) offers stock brokerage, financial advisory and strategy consulting in Pakistan. Open your trading account online in minutes."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Integrated Equities Limited (IEL)" />
+    <meta
+      property="og:description"
+      content="IEL offers bespoke brokerage, financial advisory, and strategy consulting for investors and businesses across Pakistan."
+    />
+    <meta property="og:url" content="https://iel.net.pk/index.html" />
+    <meta
+      property="og:image"
+      content="https://iel.net.pk/Assets/whiteLogoSvg.svg"
+    />
+    <meta property="og:site_name" content="Integrated Equities Limited" />
+    <link rel="canonical" href="https://iel.net.pk/index.html" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Assets/finalNavbar/navbar.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="shortcut icon"
+      href="IEL Assets/partners/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+
+    <style>
+      #typed-text span {
+        display: block;
+      }
+      .footer {
+        position: relative;
+        z-index: 5;
+        margin-top: -345px; /* Matches the height of the first div to create overlap */
+        background: linear-gradient(180deg, #0f0d17 0%, #191535 100%);
+      }
+      .bg-overlay {
+        position: relative;
+        z-index: 10;
+        top: -150px;
+      }
+      @media screen and (max-width: 768px) {
+        .bg-overlay {
+          top: -230px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .auto-scroll {
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .auto-scroll-content {
+          display: inline-block;
+          animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        /* Pause animation on hover */
+        .auto-scroll:hover .auto-scroll-content {
+          animation-play-state: paused;
+        }
+        .auto-scroll-content {
+          animation: scroll 10s linear infinite;
+        }
+      }
+      #welcomePopup {
+        z-index: 1000;
+      }
+      #NewwelcomePopup {
+        z-index: 1001;
+      }
+
+      @keyframes popupEntry {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-popupEntry {
+        animation: popupEntry 0.45s ease-in-out forwards;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 480px) {
+        #fraudPopup .grid-cols-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Gap between carousel slides */
+      .modal_carousel .slick-slide {
+        margin: 0 20px; /* ← This creates 40px total gap (20px left + 20px right) */
+        outline: none;
+      }
+
+      /* Optional: Make gap smaller on mobile */
+      @media (max-width: 768px) {
+        .modal_carousel .slick-slide {
+          margin: 0 12px; /* smaller gap on small screens */
+        }
+      }
+
+      /* Center mode padding (helps when slides are not full-width) */
+      .modal_carousel .slick-list {
+        margin: 0 -20px; /* negative margin to compensate slide margins */
+      }
+
+      /* Ensure dots are nicely positioned */
+      .slick-dots {
+        bottom: 20px !important;
+      }
+
+      /* Slick Carousel Navigation Arrows */
+      .modal_carousel .slick-prev,
+      .modal_carousel .slick-next {
+        width: 50px !important;
+        height: 48px !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+        border-radius: 50% !important;
+        z-index: 30 !important;
+        transition: all 0.3s ease !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .modal_carousel .slick-prev:hover,
+      .modal_carousel .slick-next:hover {
+        background: #e3442d !important; /* your brand red #C8102E with opacity */
+        transform: translateY(-50%) scale(1.1) !important;
+      }
+
+      .modal_carousel .slick-prev {
+        left: -60px !important;
+      }
+
+      .modal_carousel .slick-next {
+        right: -60px !important;
+      }
+
+      /* Arrow icons (using Font Awesome or simple SVG) */
+      .modal_carousel .slick-prev:before,
+      .modal_carousel .slick-next:before {
+        font-size: 28px !important;
+        color: white !important;
+        opacity: 1 !important;
+        line-height: 50px !important;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
+        .modal_carousel .slick-prev,
+        .modal_carousel .slick-next {
+          width: 44px !important;
+          height: 44px !important;
+        }
+        .modal_carousel .slick-prev {
+          left: 8px !important;
+        }
+        .modal_carousel .slick-next {
+          right: 8px !important;
+        }
+        .modal_carousel .slick-prev:before,
+        .modal_carousel .slick-next:before {
+          font-size: 24px !important;
+        }
+      }
+
+      /* Hide arrows when only one slide is visible (optional) */
+      .modal_carousel .slick-disabled {
+        opacity: 0.4 !important;
+        cursor: not-allowed !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ==================== POPUP MODAL ==================== -->
+    <!-- ==================== SHAREHOLDER AGAHI POPUP ==================== -->
+    <!-- <div
+      id="welcomePopup"
+      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="bg-white rounded-lg max-w-xl w-full mx-4 p-6 md:p-8 relative animate-fadeIn shadow-2xl"
+      >
+        <button
+          id="closePopup1"
+          class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl transition"
+        >
+          ×
+        </button>
+
+        <div class="text-center">
+          <img
+            src="IEL Assets/partners/BlackLogoSvg.svg"
+            alt="IEL Logo"
+            class="h-12 mx-auto mb-6"
+          />
+
+          <h3
+            class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight"
+          >
+            Shareholder Agahi – Your Gateway to Shareholder Insights
+          </h3>
+
+          <p class="text-gray-600 text-sm md:text-base mb-6 leading-relaxed">
+            Pakistan’s first comprehensive platform, developed by
+            <strong>PICG</strong> and <strong>CDC</strong>, dedicated to
+            enhancing shareholder awareness and empowerment.<br />
+            <span class="block mt-2">
+              Discover real-time updates, rights, and governance insights.
+              Empower yourself with accurate information.
+            </span>
+          </p>
+
+\          <div class="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+            <a
+              href="https://www.shareholderagahi.com/"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-2 bg-[#E3442D] text-white py-3 px-6 rounded font-semibold hover:bg-[#c6331f] transition"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                ></path>
+              </svg>
+              Explore the Portal
+            </a>
+
+            <a
+              href="https://www.youtube.com/watch?v=O7iCRiKJ37A"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-2 bg-[#58BA83] text-white py-3 px-6 rounded font-semibold hover:bg-[#4aa36f] transition"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.016 3.016 0 0 0 .502 6.186 31.20 31.20 0 0 0 0 12.005a31.20 31.20 0 0 0 .502 5.819 3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.016 3.016 0 0 0 2.122-2.136A31.20 31.20 0 0 0 24 12.005a31.20 31.20 0 0 0-.502-5.819zM9.75 15.568V8.432l6.24 3.568-6.24 3.568z"
+                />
+              </svg>
+              Watch Tutorial (Urdu)
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 mb-6">
+            <img
+              src="IEL Assets/pop_up_img1.jpg"
+              alt="Shareholder Agahi Feature 1"
+              class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+            />
+            <img
+              src="IEL Assets/pop-up-img2.png"
+              alt="Shareholder Agahi Feature 2"
+              class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+            />
+            <img
+              src="IEL Assets/pop-up-img3.jpg"
+              alt="Shareholder Agahi Feature 3"
+              class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+            />
+          </div>
+
+          <label
+            class="flex items-center justify-center text-sm text-gray-500 cursor-pointer select-none"
+          >
+            <input
+              type="checkbox"
+              id="dontShowAgain1"
+              class="mr-2 accent-[#E3442D]"
+            />
+            Don’t show this again
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      id="welcomePopupB"
+      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="bg-white rounded-lg max-w-xl w-full mx-4 p-6 md:p-8 relative animate-fadeIn shadow-2xl"
+      >
+        <button
+          id="closePopup2"
+          class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-3xl transition"
+        >
+          ×
+        </button>
+
+        <div class="text-center">
+          <img
+            src="IEL Assets/partners/BlackLogoSvg.svg"
+            alt="IEL Logo"
+            class="h-12 mx-auto mb-6"
+          />
+
+          <h3
+            class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight"
+          >
+            Shareholder Agahi – Your Gateway to Shareholder Insights
+          </h3>
+
+          <p class="text-gray-600 text-sm md:text-base mb-6 leading-relaxed">
+            Pakistan’s first comprehensive platform, developed by
+            <strong>PICG</strong> and <strong>CDC</strong>, dedicated to
+            enhancing shareholder awareness and empowerment.<br />
+            <span class="block mt-2">
+              Discover real-time updates, rights, and governance insights.
+              Empower yourself with accurate information.
+            </span>
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+            <a
+              href="https://www.shareholderagahi.com/"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-2 bg-[#E3442D] text-white py-3 px-6 rounded font-semibold hover:bg-[#c6331f] transition"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                ></path>
+              </svg>
+              Explore the Portal
+            </a>
+
+            <a
+              href="https://www.youtube.com/watch?v=O7iCRiKJ37A"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-2 bg-[#58BA83] text-white py-3 px-6 rounded font-semibold hover:bg-[#4aa36f] transition"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.016 3.016 0 0 0 .502 6.186 31.20 31.20 0 0 0 0 12.005a31.20 31.20 0 0 0 .502 5.819 3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.016 3.016 0 0 0 2.122-2.136A31.20 31.20 0 0 0 24 12.005a31.20 31.20 0 0 0-.502-5.819zM9.75 15.568V8.432l6.24 3.568-6.24 3.568z"
+                />
+              </svg>
+              Watch Tutorial (Urdu)
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 mb-6">
+            <img
+              src="IEL Assets/pop_up_img1.jpg"
+              alt="Shareholder Agahi Feature 1"
+              class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+            />
+            <img
+              src="IEL Assets/pop-up-img2.png"
+              alt="Shareholder Agahi Feature 2"
+              class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+            />
+            <img
+              src="IEL Assets/pop-up-img3.jpg"
+              alt="Shareholder Agahi Feature 3"
+              class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+            />
+          </div>
+
+          <label
+            class="flex items-center justify-center text-sm text-gray-500 cursor-pointer select-none"
+          >
+            <input
+              type="checkbox"
+              id="dontShowAgain2"
+              class="mr-2 accent-[#E3442D]"
+            />
+            Don’t show this again
+          </label>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- ==================== DUAL POPUP CONTAINER ==================== -->
+    <!-- ==================== DUAL POPUP CAROUSEL CONTAINER ==================== -->
+    <div
+      id="dualPopupContainer"
+      class="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000] hidden px-4"
+    >
+      <div class="modal_carousel w-full max-w-[660px] mx-auto outline-none">
+        <!-- Slide 1: Shareholder Agahi Popup -->
+        <div
+          class="bg-white rounded-2xl shadow-2xl overflow-y-auto max-h-[90vh]"
+        >
+          <button
+            class="close-slide absolute top-5 right-10 text-gray-700 hover:text-black text-5xl font-bold z-20 transition"
+          >
+            ×
+          </button>
+          <div class="p-6 sm:p-8 md:p-10 lg:p-12 text-center">
+            <img
+              src="IEL Assets/partners/BlackLogoSvg.svg"
+              alt="IEL Logo"
+              class="h-14 sm:h-16 mx-auto mb-6 md:mb-8"
+              loading="lazy"
+            />
+            <h3
+              class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-5 md:mb-6 leading-tight"
+            >
+              Shareholder Agahi – Your Gateway to Shareholder Insights
+            </h3>
+            <p
+              class="text-gray-600 text-sm sm:text-base md:text-lg mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto"
+            >
+              Pakistan’s first comprehensive platform, developed by
+              <strong>PICG</strong> and <strong>CDC</strong>, dedicated to
+              enhancing shareholder awareness and empowerment.<br />
+              <span class="block mt-3 md:mt-4 font-medium">
+                Discover real-time updates, rights, and governance insights.
+                Empower yourself with accurate information.
+              </span>
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-8 md:mb-10"
+            >
+              <a
+                href="https://www.shareholderagahi.com/"
+                target="_blank"
+                class="inline-flex items-center justify-center gap-2 bg-[#E3442D] text-white py-3 px-6 md:px-8 rounded-lg font-semibold hover:bg-[#c22e1f] transition text-base md:text-lg shadow-md"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  ></path>
+                </svg>
+                Explore the Portal
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=O7iCRiKJ37A"
+                target="_blank"
+                class="inline-flex items-center justify-center gap-2 bg-[#58BA83] text-white py-3 px-6 md:px-8 rounded-lg font-semibold hover:bg-[#4aa36f] transition text-base md:text-lg shadow-md"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.016 3.016 0 0 0 .502 6.186 31.20 31.20 0 0 0 0 12.005a31.20 31.20 0 0 0 .502 5.819 3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.016 3.016 0 0 0 2.122-2.136A31.20 31.20 0 0 0 24 12.005a31.20 31.20 0 0 0-.502-5.819zM9.75 15.568V8.432l6.24 3.568-6.24 3.568z"
+                  ></path>
+                </svg>
+                Watch Tutorial (Urdu)
+              </a>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
+              <img
+                src="IEL Assets/pop_up_img1.jpg"
+                alt="Feature 1"
+                class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+                loading="lazy"
+              />
+              <img
+                src="IEL Assets/pop-up-img2.png"
+                alt="Feature 2"
+                class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+                loading="lazy"
+              />
+              <img
+                src="IEL Assets/pop-up-img3.jpg"
+                alt="Feature 3"
+                class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+                loading="lazy"
+              />
+            </div>
+
+            <label
+              class="flex items-center justify-center text-sm md:text-base text-gray-600 cursor-pointer select-none mb-10"
+            >
+              <input
+                type="checkbox"
+                id="dontShowAgainA"
+                class="mr-3 accent-[#E3442D]"
+              />
+              Don’t show this again
+            </label>
+          </div>
+        </div>
+
+        <!-- Slide 2: Fraud Awareness Popup -->
+        <div
+          class="bg-white rounded-2xl shadow-2xl overflow-y-auto max-h-[90vh]"
+        >
+          <button
+            class="close-slide absolute top-5 right-10 text-gray-700 hover:text-black text-5xl font-bold z-20 transition"
+          >
+            ×
+          </button>
+
+          <div class="p-6 sm:p-8 md:p-10 lg:p-12 mt-10">
+            <div class="bg-[#1A1A2E] text-white py-5 px-6 md:px-10 text-center">
+              <h2
+                class="text-lg sm:text-xl md:text-2xl font-bold font-['Playfair_Display'] tracking-wide"
+              >
+                WEBSITE POPUP — FRAUD AWARENESS NOTICE
+              </h2>
+            </div>
+
+            <div class="p-6 md:p-8 lg:p-10">
+              <div class="text-center mb-8 md:mb-10">
+                <h2
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#C8102E] font-['Playfair_Display'] mb-4 md:mb-6"
+                >
+                  IMPORTANT NOTICE
+                </h2>
+                <hr
+                  class="border-0 h-[2px] bg-[#C8102E] mb-6 max-w-xs mx-auto"
+                />
+
+                <h3
+                  class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4"
+                >
+                  Beware of Fraudulent Schemes
+                </h3>
+                <h4
+                  class="text-lg md:text-xl font-semibold text-gray-700 mb-6 md:mb-8"
+                >
+                  Misusing the Name of IEL
+                </h4>
+
+                <div
+                  class="bg-[#FFF3F5] border-l-4 border-[#C8102E] p-5 md:p-6 lg:p-8 rounded-r-xl"
+                >
+                  <p
+                    class="text-gray-700 text-base md:text-lg leading-relaxed italic"
+                  >
+                    Fraudulent individuals and entities are increasingly
+                    misusing the identity of licensed Securities Brokers through
+                    fake profiles, apps, unauthorized WhatsApp numbers, and
+                    misleading social media pages to deceive investors.
+                  </p>
+                </div>
+              </div>
+
+              <!-- WHAT TO WATCH OUT FOR -->
+              <div class="mb-10 md:mb-12">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-[#C8102E] mb-5 md:mb-6 font-['Playfair_Display']"
+                >
+                  WHAT TO WATCH OUT FOR
+                </h2>
+                <hr class="border-0 h-[1px] bg-[#C8102E] mb-6" />
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 md:p-6 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3"
+                    >
+                      Fake WhatsApp Numbers & Apps
+                    </h4>
+                    <p class="text-sm md:text-base text-gray-600">
+                      Unauthorized mobile apps and WhatsApp numbers
+                      impersonating licensed brokers.
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 md:p-6 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3"
+                    >
+                      Fake Social Media Profiles
+                    </h4>
+                    <p class="text-sm md:text-base text-gray-600">
+                      Profiles falsely impersonating directors or executives of
+                      brokerage houses.
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 md:p-6 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3"
+                    >
+                      Requests for OTPs & Funds
+                    </h4>
+                    <p class="text-sm md:text-base text-gray-600">
+                      Demands for OTPs, personal information, or money through
+                      unofficial channels.
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 md:p-6 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3"
+                    >
+                      Misleading Pages & Links
+                    </h4>
+                    <p class="text-sm md:text-base text-gray-600">
+                      Fake pages with no official affiliation to any
+                      PSX-licensed brokerage firm.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PLEASE NOTE -->
+              <div class="mb-10 md:mb-12">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-gray-900 mb-5 md:mb-6 font-['Playfair_Display']"
+                >
+                  PLEASE NOTE
+                </h2>
+                <hr class="border-0 h-[1px] bg-[#C8102E] mb-6" />
+
+                <ul
+                  class="space-y-3 md:space-y-4 text-gray-700 text-sm md:text-base list-disc pl-5 md:pl-6"
+                >
+                  <li>
+                    IEL has NO affiliation with any unofficial pages, profiles,
+                    apps, or WhatsApp numbers.
+                  </li>
+                  <li>
+                    We NEVER request OTPs, personal information, funds, or
+                    investments through unofficial platforms.
+                  </li>
+                  <li>
+                    All communication is conducted ONLY through our official
+                    phone numbers, website, email, and verified social media
+                    handles.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- HOW TO STAY PROTECTED -->
+              <div class="mb-10 md:mb-12">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-green-900 mb-5 md:mb-6 font-['Playfair_Display']"
+                >
+                  HOW TO STAY PROTECTED
+                </h2>
+                <hr class="border-0 h-[1px] bg-gray-800 mb-6" />
+
+                <ul
+                  class="space-y-3 md:space-y-4 text-gray-700 text-sm md:text-base list-disc pl-5 md:pl-6"
+                >
+                  <li>
+                    Always verify the authenticity of any communication before
+                    engaging.
+                  </li>
+                  <li>
+                    Confirm licensed entities through the SECP and PSX official
+                    websites before transacting.
+                  </li>
+                  <li>
+                    Transact ONLY through official banking channels linked to
+                    licensed brokers.
+                  </li>
+                  <li>
+                    Regularly visit SECP, PSX, CDC, and NCCPL websites for
+                    authentic updates and public alerts.
+                  </li>
+                  <li>
+                    When in doubt, contact our official representatives directly
+                    before taking any action.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- OFFICIAL CHANNELS -->
+              <div class="mb-10 md:mb-12">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-green-900 mb-5 md:mb-6 font-['Playfair_Display']"
+                >
+                  OFFICIAL CHANNELS
+                </h2>
+                <hr class="border-0 h-[1px] bg-gray-800 mb-6" />
+
+                <div
+                  class="border border-gray-300 rounded-lg overflow-hidden divide-y divide-gray-200"
+                >
+                  <div
+                    class="grid grid-cols-[120px,1fr] sm:grid-cols-[140px,1fr] items-center gap-4 p-4 hover:bg-gray-50"
+                  >
+                    <span class="font-medium text-gray-800">Website</span>
+                    <span class="text-gray-700">www.iel.net.pk</span>
+                  </div>
+                  <div
+                    class="grid grid-cols-[120px,1fr] sm:grid-cols-[140px,1fr] items-center gap-4 p-4 hover:bg-gray-50"
+                  >
+                    <span class="font-medium text-gray-800">Email</span>
+                    <span class="text-gray-700">info@iel.net.pk</span>
+                  </div>
+                  <div
+                    class="grid grid-cols-[120px,1fr] sm:grid-cols-[140px,1fr] items-center gap-4 p-4 hover:bg-gray-50"
+                  >
+                    <span class="font-medium text-gray-800">Helpline</span>
+                    <span class="text-gray-700">0345 0091263</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA & Checkbox -->
+              <div
+                class="flex flex-col items-center gap-6 mt-8 md:mt-10 pb-6 md:pb-8"
+              >
+                <button
+                  id="understandBtn"
+                  class="bg-[#C8102E] text-white font-bold text-base sm:text-lg md:text-xl px-8 sm:px-10 md:px-12 py-4 md:py-5 rounded-xl hover:bg-[#A50D25] transition shadow-lg focus:outline-none focus:ring-4 focus:ring-[#C8102E]/30 w-full sm:w-auto"
+                >
+                  I Understand – Proceed to Website
+                </button>
+
+                <label
+                  class="flex items-center gap-3 text-gray-600 cursor-pointer select-none text-sm md:text-base"
+                >
+                  <input
+                    type="checkbox"
+                    id="dontShowAgain"
+                    class="accent-[#C8102E] cursor-pointer"
+                  />
+                  Don’t show this again during this session
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div
+      id="dualPopupContainer"
+      class="fixed inset-0 bg-black/70 flex items-center justify-center z-[1000] hidden overflow-y-auto"
+    >
+      <div class="modal_carousel w-full max-w-[660px] mx-auto">
+        <div
+          class="bg-white rounded-xl max-w-[660px] md:max-h-[600px] w-full md:w-1/2 shadow-2xl relative top-[1700px] md:top-[1000px] animate-fadeIn overflow-hidden"
+        >
+          <button
+            id="closePopupA"
+            class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-4xl z-10 transition"
+          >
+            ×
+          </button>
+          <div class="p-8 text-center">
+            <img
+              src="IEL Assets/partners/BlackLogoSvg.svg"
+              alt="IEL Logo"
+              class="h-14 mx-auto mb-6"
+              loading="lazy"
+            />
+            <h3
+              class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight"
+            >
+              Shareholder Agahi – Your Gateway to Shareholder Insights
+            </h3>
+            <p class="text-gray-600 text-base mb-8 leading-relaxed">
+              Pakistan’s first comprehensive platform, developed by
+              <strong>PICG</strong> and <strong>CDC</strong>, dedicated to
+              enhancing shareholder awareness and empowerment.<br />
+              <span class="block mt-3"
+                >Discover real-time updates, rights, and governance insights.
+                Empower yourself with accurate information.</span
+              >
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a
+                href="https://www.shareholderagahi.com/"
+                target="_blank"
+                class="inline-flex items-center justify-center gap-2 bg-[#E3442D] text-white py-3 px-7 rounded font-semibold hover:bg-[#c22e1f] transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  ></path>
+                </svg>
+                Explore the Portal
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=O7iCRiKJ37A"
+                target="_blank"
+                class="inline-flex items-center justify-center gap-2 bg-[#58BA83] text-white py-3 px-7 rounded font-semibold hover:bg-[#4aa36f] transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.016 3.016 0 0 0 .502 6.186 31.20 31.20 0 0 0 0 12.005a31.20 31.20 0 0 0 .502 5.819 3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.016 3.016 0 0 0 2.122-2.136A31.20 31.20 0 0 0 24 12.005a31.20 31.20 0 0 0-.502-5.819zM9.75 15.568V8.432l6.24 3.568-6.24 3.568z"
+                  ></path>
+                </svg>
+                Watch Tutorial (Urdu)
+              </a>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <img
+                src="IEL Assets/pop_up_img1.jpg"
+                alt="Feature 1"
+                class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+                loading="lazy"
+              />
+              <img
+                src="IEL Assets/pop-up-img2.png"
+                alt="Feature 2"
+                class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+                loading="lazy"
+              />
+              <img
+                src="IEL Assets/pop-up-img3.jpg"
+                alt="Feature 3"
+                class="w-full h-20 object-contain rounded-lg shadow-sm group-hover:shadow-md transition"
+                loading="lazy"
+              />
+            </div>
+            <label
+              class="flex items-center justify-center text-sm text-gray-600 cursor-pointer select-none"
+            >
+              <input
+                type="checkbox"
+                id="dontShowAgainA"
+                class="mr-2 accent-[#E3442D]"
+                loading="lazy"
+              />
+              Don’t show this again
+            </label>
+          </div>
+        </div>
+
+        <div
+          id="fraudPopup"
+          class="bg-white rounded-xl max-w-[660px] w-full md:w-1/2 shadow-2xl relative top-[1700px] md:top-[1000px] animate-popupEntry overflow-hidden"
+          style="font-family: &quot;DM Sans&quot;, system-ui, sans-serif"
+        >
+          <button
+            id="closePopupB"
+            class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-4xl z-10 transition"
+          >
+            ×
+          </button>
+          <div class="p-8 text-center">
+            <div
+              class="bg-[#1A1A2E] text-white py-5 px-6 md:px-10 text-center mt-10"
+            >
+              <h2
+                class="text-md md:text-xl font-bold font-['Playfair_Display'] tracking-wide"
+              >
+                WEBSITE POPUP — FRAUD AWARENESS NOTICE
+              </h2>
+            </div>
+
+            <div class="p-6 md:p-10">
+              <div class="text-center mb-8">
+                <h2
+                  class="text-2xl md:text-3xl font-bold text-[#C8102E] font-['Playfair_Display'] mb-4"
+                >
+                  IMPORTANT NOTICE
+                </h2>
+                <hr
+                  class="border-0 h-[2px] bg-[#C8102E] mb-6 max-w-xs mx-auto"
+                />
+
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                  Beware of Fraudulent Schemes
+                </h3>
+                <h4 class="text-lg md:text-xl font-semibold text-gray-700 mb-6">
+                  Misusing the Name of [Broker Name]
+                </h4>
+
+                <div
+                  class="bg-[#FFF3F5] border-l-4 border-[#C8102E] p-5 md:p-6 rounded-r-lg"
+                >
+                  <p
+                    class="text-gray-700 text-base md:text-lg leading-relaxed italic"
+                  >
+                    Fraudulent individuals and entities are increasingly
+                    misusing the identity of licensed Securities Brokers through
+                    fake profiles, apps, unauthorized WhatsApp numbers, and
+                    misleading social media pages to deceive investors.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mb-10">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-[#C8102E] mb-5 font-['Playfair_Display']"
+                >
+                  WHAT TO WATCH OUT FOR
+                </h2>
+                <hr class="border-0 h-[1px] bg-[#C8102E] mb-6" />
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2"
+                    >
+                      Fake WhatsApp Numbers & Apps
+                    </h4>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Unauthorized mobile apps and WhatsApp numbers
+                      impersonating licensed brokers.
+                    </p>
+                  </div>
+
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2"
+                    >
+                      Fake Social Media Profiles
+                    </h4>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Profiles falsely impersonating directors or executives of
+                      brokerage houses.
+                    </p>
+                  </div>
+
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2"
+                    >
+                      Requests for OTPs & Funds
+                    </h4>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Demands for OTPs, personal information, or money through
+                      unofficial channels.
+                    </p>
+                  </div>
+
+                  <div
+                    class="bg-[#F5F5F5] border border-gray-200 rounded-lg p-5 hover:shadow-md transition"
+                  >
+                    <h4
+                      class="text-base md:text-lg font-bold text-gray-900 mb-2"
+                    >
+                      Misleading Pages & Links
+                    </h4>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Fake pages with no official affiliation to any
+                      PSX-licensed brokerage firm.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-10">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-gray-900 mb-5 font-['Playfair_Display']"
+                >
+                  PLEASE NOTE
+                </h2>
+                <hr class="border-0 h-[1px] bg-[#C8102E] mb-6" />
+
+                <ul
+                  class="space-y-3 text-gray-700 text-sm md:text-base text-start list-disc pl-5"
+                >
+                  <li>
+                    [Broker Name] has NO affiliation with any unofficial pages,
+                    profiles, apps, or WhatsApp numbers.
+                  </li>
+                  <li>
+                    We NEVER request OTPs, personal information, funds, or
+                    investments through unofficial platforms.
+                  </li>
+                  <li>
+                    All communication is conducted ONLY through our official
+                    phone numbers, website, email, and verified social media
+                    handles.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mb-10">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-green-900 mb-5 font-['Playfair_Display']"
+                >
+                  HOW TO STAY PROTECTED
+                </h2>
+                <hr class="border-0 h-[1px] bg-gray-800 mb-6" />
+
+                <ul
+                  class="space-y-3 text-gray-700 text-sm md:text-base list-disc pl-5 text-start"
+                >
+                  <li>
+                    Always verify the authenticity of any communication before
+                    engaging.
+                  </li>
+                  <li>
+                    Confirm licensed entities through the SECP and PSX official
+                    websites before transacting.
+                  </li>
+                  <li>
+                    Transact ONLY through official banking channels linked to
+                    licensed brokers.
+                  </li>
+                  <li>
+                    Regularly visit SECP, PSX, CDC, and NCCPL websites for
+                    authentic updates and public alerts.
+                  </li>
+                  <li>
+                    When in doubt, contact our official representatives directly
+                    before taking any action.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mb-10">
+                <h2
+                  class="text-xl md:text-2xl font-bold text-green-900 mb-5 font-['Playfair_Display']"
+                >
+                  OFFICIAL CHANNELS
+                </h2>
+                <hr class="border-0 h-[1px] bg-gray-800 mb-6" />
+
+                <div
+                  class="border border-gray-300 rounded-lg overflow-hidden divide-y divide-gray-200"
+                >
+                  <div
+                    class="grid grid-cols-[140px,1fr] md:grid-cols-[160px,1fr] items-center gap-4 p-4 hover:bg-gray-50"
+                  >
+                    <span class="font-medium text-gray-800">Website</span>
+                    <span class="text-gray-600">www.iel.net.pk </span>
+                  </div>
+                  <div
+                    class="grid grid-cols-[140px,1fr] md:grid-cols-[160px,1fr] items-center gap-4 p-4 hover:bg-gray-50"
+                  >
+                    <span class="font-medium text-gray-800">Email</span>
+                    <span class="text-gray-600">info@iel.net.pk</span>
+                  </div>
+
+                  <div
+                    class="grid grid-cols-[140px,1fr] md:grid-cols-[160px,1fr] items-center gap-4 p-4 hover:bg-gray-50"
+                  >
+                    <span class="font-medium text-gray-800">Helpline</span>
+                    <span class="text-gray-600">0345 0091263</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center gap-6 mt-8">
+                <button
+                  id="understandBtn"
+                  class="bg-[#C8102E] text-white font-semibold text-lg px-10 py-4 rounded-lg hover:bg-[#A50D25] transition shadow-md focus:outline-none focus:ring-2 focus:ring-[#C8102E]/40"
+                >
+                  I Understand – Proceed to Website
+                </button>
+
+                <label
+                  class="flex items-center gap-3 text-gray-600 cursor-pointer select-none"
+                >
+                  <input
+                    type="checkbox"
+                    id="dontShowAgain"
+                    class="w-5 h-5 accent-[#C8102E] cursor-pointer"
+                  />
+                  Don’t show this again during this session
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- =================================================== -->
+    <!-------------------------Hero Section------------------------->
+    <div>
+      <main class="h-[1240px] md:h-[1050px] xl:h-[830px]">
+        <div class="content h-[1240px] md:h-[1050px] xl:h-[830px]">
+          <div class="w-[100vw]">
+            <div
+              class="relative w-[100vw] h-[1240px] md:h-[1050px] xl:h-[830px]"
+            >
+              <div class="xl:container mx-auto">
+                <div
+                  class="absolute top-0 left-0 w-full h-full object-cover bg-[#F9F9F9]"
+                ></div>
+                <div
+                  class="relative flex flex-col md:flex-row py-[40px] md:py-[100px] px-[24px] md:px-[42px] lg:px-16 justify-center md:justify-between 2xl:pt-[100px] item-center mt-[10vh] md:mt-[10vh] 3xl:mt-[10vh]"
+                >
+                  <div
+                    class="relative text-black md:w-[40vw]"
+                    style="z-index: 105"
+                  >
+                    <h1
+                      id="typed-text"
+                      class="font-[600] text-[30px] md:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
+                    >
+                      Smart moves. Sharp insights. Financial freedom — your way.
+                      <!-- <span id="line1-slide1"></span> -->
+                      <!-- <span id="line2"></span> -->
+                    </h1>
+                    <p
+                      class="mt-[12px] text-[20px] font-[500] leading-[28px] text-[#6E6E6E] w-full xl:w-[580px]"
+                    >
+                      <!-- From your first stock pick to your next big
+                      acquisition—we're in it with you. IEL brings bespoke
+                      brokerage, laser-focused advisory, and strategy consulting
+                      under one roof. -->
+                      Smart moves start with sharp insights. From your first
+                      stock pick to your next big acquisition, IEL brings
+                      bespoke brokerage, laser-focused advisory and strategy
+                      consulting under one roof, so you can chase financial
+                      freedom your way.
+                    </p>
+
+                    <p class="mt-[32px] font-[600] text-[20px] leading-[100%]">
+                      Get started with a financial partner that's actually
+                      paying attention.
+                    </p>
+                    <div
+                      class="hidden md:flex flex-col xl:flex-row items-center mt-[40px]"
+                    >
+                      <a
+                        class="py-3 flex justify-center items-center rounded-[4px] bg-[#E3442D] text-white font-[600] text-[16px] w-[263px]"
+                        href="OpenAccount.html"
+                      >
+                        Open an Account
+                      </a>
+                      <a
+                        class="bg-[#58BA83] text-white py-3 flex justify-center items-center rounded-[4px] font-[600] text-[16px] w-[263px] mt-[24px] xl:mt-0 xl:ms-[24px]"
+                        href="Contact.html"
+                      >
+                        Book a Free Consultation
+                      </a>
+                    </div>
+
+                    <div class="mt-[56px] hidden md:block">
+                      <span
+                        class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                        >Associated and Affiliate companies:</span
+                      >
+                      <br />
+
+                      <div class="flex justify-between w-[240px] mt-[20px]">
+                        <!-- <img
+                          src="IEL Assets/new_logo.png"
+                          alt="New Logo"
+                          class="w-[65px] h-[40px]"
+                          loading="lazy"
+                        /> -->
+                        <img
+                          src="IEL Assets/header_bottom_logo_2.png"
+                          alt="Logo 2"
+                          class="w-[45px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_3.png"
+                          alt="Logo 3"
+                          class="w-[114px] h-[40px]"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="relative w-full xl:w-[538px] h-[382px]">
+                      <!-- <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -left-10 top-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/header_img_bg_pattern.svg"
+                        alt="Background Pattern"
+                        class="absolute -top-16 -right-24 h-[550px]"
+                        loading="lazy"
+                      />
+                      <!-- <img
+                        src="IEL Assets/header_side_img_bg.png"
+                        alt="Background Image"
+                        class="absolute top-0 left-0 w-[558px] h-[402px] z-10"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_side_img.png"
+                        alt="Foreground Image"
+                        class="absolute top-[20px] left-[20px] w-[498px] h-[362px] z-20"
+                        loading="lazy"
+                      />
+                      <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -right-10 -bottom-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/partners/new_header_frame.png"
+                        alt="Header Frame"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col md:hidden items-center">
+                    <a
+                      class="py-3 flex justify-center items-center rounded-[4px] bg-[#E3442D] text-white font-[600] text-[16px] w-[263px]"
+                      href="OpenAccount.html"
+                    >
+                      Open an Account
+                    </a>
+                    <a
+                      class="bg-[#58BA83] text-white py-3 flex justify-center items-center rounded-[4px] font-[600] text-[16px] w-[263px] mt-[24px]"
+                      href="Contact.html"
+                    >
+                      Book a Free Consultation
+                    </a>
+                  </div>
+
+                  <div class="block md:hidden text-center md:text-start mt-6">
+                    <span
+                      class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                      >Associated companies:</span
+                    >
+                    <br />
+
+                    <div
+                      class="flex justify-between w-full md:w-[400px] mt-[20px]"
+                    >
+                      <img
+                        src="IEL Assets/new_logo.png"
+                        alt="New Logo"
+                        class="w-[65px] h-[40px]"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_bottom_logo_2.png"
+                        alt="Logo 2"
+                        class="w-[45px] h-[40px]"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_bottom_logo_3.png"
+                        alt="Logo 3"
+                        class="w-[114px] h-[40px]"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="relative w-[100vw] h-[1240px] md:h-[1050px] xl:h-[830px]"
+            >
+              <div class="xl:container mx-auto">
+                <div
+                  class="absolute top-0 left-0 w-full h-full object-cover bg-[#F9F9F9]"
+                ></div>
+                <div
+                  class="relative flex flex-col md:flex-row py-[40px] md:py-[100px] px-[24px] md:px-[42px] lg:px-16 justify-center md:justify-between 2xl:pt-[100px] item-center mt-[10vh] md:mt-[10vh] 3xl:mt-[10vh]"
+                >
+                  <div
+                    class="relative text-black md:w-[40vw]"
+                    style="z-index: 105"
+                  >
+                    <h2
+                      id="typed-text2"
+                      class="font-[600] text-[30px] md:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
+                    >
+                      The gap between where you are and where you want to be? We
+                      close it.
+                      <!-- <span id="line2-slide2"></span> -->
+                    </h2>
+                    <p
+                      class="mt-[12px] text-[20px] font-[500] leading-[28px] text-[#6E6E6E] w-full xl:w-[580px]"
+                    >
+                      Your wealth shouldn't be left to chance. At IEL, we turn
+                      financial ambition into measurable results through
+                      precision brokerage, strategic advisory, and growth
+                      consulting that's earned our clients' trust since 2008.
+                    </p>
+                    <div class="mt-[56px] hidden md:block">
+                      <span
+                        class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                        >Associated companies:</span
+                      >
+                      <br />
+
+                      <div class="flex justify-between w-[400px] mt-[20px]">
+                        <img
+                          src="IEL Assets/new_logo.png"
+                          alt="New Logo"
+                          class="w-[65px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_2.png"
+                          alt="Logo 2"
+                          class="w-[45px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_3.png"
+                          alt="Logo 3"
+                          class="w-[114px] h-[40px]"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="relative w-full xl:w-[538px] h-[382px]">
+                      <!-- <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -left-10 top-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/header_img_bg_pattern.svg"
+                        alt="Background Pattern"
+                        class="absolute -top-16 -right-24 h-[550px]"
+                        loading="lazy"
+                      />
+                      <!-- <img
+                        src="IEL Assets/header_side_img_bg.png"
+                        alt="Background Image"
+                        class="absolute top-0 left-0 w-[558px] h-[402px] z-10"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_side_img.png"
+                        alt="Foreground Image"
+                        class="absolute top-[20px] left-[20px] w-[498px] h-[362px] z-20"
+                        loading="lazy"
+                      /> -->
+                      <!-- <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -right-10 -bottom-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/partners/new_header_frame.png"
+                        alt="Header Frame"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="block md:hidden text-center md:block">
+                      <span
+                        class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                        >Associated companies:</span
+                      >
+                      <br />
+
+                      <div
+                        class="flex justify-between w-full md:w-[400px] mt-[20px]"
+                      >
+                        <img
+                          src="IEL Assets/new_logo.png"
+                          alt="New Logo"
+                          class="w-[65px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_2.png"
+                          alt="Logo 2"
+                          class="w-[45px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_3.png"
+                          alt="Logo 3"
+                          class="w-[114px] h-[40px]"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="relative w-[100vw] h-[1240px] md:h-[1050px] xl:h-[830px]"
+            >
+              <div class="xl:container mx-auto">
+                <div
+                  class="absolute top-0 left-0 w-full h-full object-cover bg-[#F9F9F9]"
+                ></div>
+                <div
+                  class="relative flex flex-col md:flex-row py-[40px] md:py-[100px] px-[24px] md:px-[42px] lg:px-16 justify-center md:justify-between 2xl:pt-[100px] item-center mt-[10vh] md:mt-[10vh] 3xl:mt-[10vh]"
+                >
+                  <div
+                    class="relative text-black md:w-[40vw]"
+                    style="z-index: 105"
+                  >
+                    <!-- <span
+                      class="bg-white px-[20px] py-[12px] rounded-full text-[16px] font-[600] leading-[100%]"
+                      style="box-shadow: 0px 2px 12px 0px #0000000f"
+                    >
+                      Integrated Equities Limited (BFR3++ RATING)
+                    </span> -->
+                    <h2
+                      id="typed-text3"
+                      class="font-[600] text-[30px] md:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
+                    >
+                      151 million shares. Countless success stories. One trusted
+                      partner.
+                      <!-- <span id="line3-slide3"></span> -->
+                    </h2>
+                    <p
+                      class="mt-[12px] text-[20px] font-[500] leading-[28px] text-[#6E6E6E] w-full xl:w-[580px]"
+                    >
+                      When Pakistan's biggest deals need executing, they call
+                      us. When ambitious investors need guidance, they choose
+                      us. IEL delivers the expertise, insights, and execution
+                      that transform financial goals into financial freedom.
+                    </p>
+
+                    <!-- <p class="mt-[32px] font-[600] text-[20px] leading-[100%]">
+                      Get started with a financial partner that's actually
+                      paying attention.
+                    </p> -->
+                    <!-- <div class="flex items-center mt-[40px]">
+                      <a
+                        class="py-3 flex justify-center items-center rounded-[4px] bg-[#E3442D] text-white font-[600] text-[16px] uppercase w-[263px]"
+                        href=""
+                        target="_blank"
+                      >
+                        ENTITY RATING
+                      </a>
+                      <a
+                        class="bg-[#58BA83] text-white py-3 flex justify-center items-center rounded-[4px] font-[600] text-[16px] uppercase w-[263px] ms-[24px]"
+                        href=""
+                        target="_blank"
+                      >
+                        BFR3++ RATING
+                      </a>
+                    </div> -->
+                    <div class="hidden md:block mt-[56px]">
+                      <span
+                        class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                        >Associated companies:</span
+                      >
+                      <br />
+
+                      <div class="flex justify-between w-[400px] mt-[20px]">
+                        <img
+                          src="IEL Assets/new_logo.png"
+                          alt="New Logo"
+                          class="w-[65px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_2.png"
+                          alt="Logo 2"
+                          class="w-[45px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_3.png"
+                          alt="Logo 3"
+                          class="w-[114px] h-[40px]"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="relative w-full xl:w-[538px] h-[382px]">
+                      <!-- <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -left-10 top-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/header_img_bg_pattern.svg"
+                        alt="Background Pattern"
+                        class="absolute -top-16 -right-24 h-[550px]"
+                        loading="lazy"
+                      />
+                      <!-- <img
+                        src="IEL Assets/header_side_img_bg.png"
+                        alt="Background Image"
+                        class="absolute top-0 left-0 w-[558px] h-[402px] z-10"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_side_img.png"
+                        alt="Foreground Image"
+                        class="absolute top-[20px] left-[20px] w-[498px] h-[362px] z-20"
+                        loading="lazy"
+                      /> -->
+                      <!-- <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -right-10 -bottom-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/partners/new_header_frame.png"
+                        alt="Header Frame"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="block md:hidden text-center">
+                    <span
+                      class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                      >Associated companies:</span
+                    >
+                    <br />
+
+                    <div
+                      class="flex justify-between w-full xl:w-[400px] mt-[20px]"
+                    >
+                      <img
+                        src="IEL Assets/new_logo.png"
+                        alt="New Logo"
+                        class="w-[65px] h-[40px]"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_bottom_logo_2.png"
+                        alt="Logo 2"
+                        class="w-[45px] h-[40px]"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_bottom_logo_3.png"
+                        alt="Logo 3"
+                        class="w-[114px] h-[40px]"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="relative w-[100vw] h-[1240px] md:h-[1050px] xl:h-[830px]"
+            >
+              <div class="xl:container mx-auto">
+                <div
+                  class="absolute top-0 left-0 w-full h-full object-cover bg-[#F9F9F9]"
+                ></div>
+                <div
+                  class="relative flex flex-col md:flex-row py-[40px] md:py-[100px] px-[24px] md:px-[42px] lg:px-16 justify-center md:justify-between 2xl:pt-[100px] item-center mt-[10vh] md:mt-[10vh] 3xl:mt-[10vh]"
+                >
+                  <div
+                    class="relative text-black md:w-[40vw]"
+                    style="z-index: 105"
+                  >
+                    <!-- <span
+                      class="bg-white px-[20px] py-[12px] rounded-full text-[16px] font-[600] leading-[100%]"
+                      style="box-shadow: 0px 2px 12px 0px #0000000f"
+                    >
+                      Integrated Equities Limited (BFR3++ RATING)
+                    </span> -->
+                    <h2
+                      id="typed-tex4"
+                      class="font-[600] text-[30px] md:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
+                    >
+                      Ready to make your money work harder?
+                      <!-- <span id="line4-slide4"></span> -->
+                    </h2>
+                    <p
+                      class="mt-[12px] text-[20px] font-[500] leading-[28px] text-[#6E6E6E] w-full xl:w-[580px]"
+                    >
+                      From first-time investors to seasoned executives, we don't
+                      just offer services—we forge partnerships. Experience
+                      bespoke brokerage, strategic advisory, and consulting that
+                      adapts to your ambitions, not the other way around.
+                    </p>
+
+                    <p class="mt-[32px] font-[600] text-[20px] leading-[100%]">
+                      Get started with a financial partner that's actually
+                      paying attention.
+                    </p>
+                    <div
+                      class="hidden md:flex flex-col xl:flex-row items-center mt-[40px]"
+                    >
+                      <a
+                        class="py-3 flex justify-center items-center rounded-[4px] bg-[#E3442D] text-white font-[600] text-[16px] w-[263px]"
+                        href="OpenAccount.html"
+                        target="_blank"
+                      >
+                        Open an Account
+                      </a>
+                      <a
+                        class="bg-[#58BA83] text-white py-3 flex justify-center items-center rounded-[4px] font-[600] text-[16px] w-[263px] mt-[24px] xl:mt-0 xl:ms-[24px]"
+                        href="Contact.html"
+                      >
+                        Book a Free Consultation
+                      </a>
+                    </div>
+
+                    <div class="mt-[56px] hidden md:block">
+                      <span
+                        class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                        >Associated companies:</span
+                      >
+                      <br />
+
+                      <div class="flex justify-between w-[400px] mt-[20px]">
+                        <img
+                          src="IEL Assets/new_logo.png"
+                          alt="New Logo"
+                          class="w-[65px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_2.png"
+                          alt="Logo 2"
+                          class="w-[45px] h-[40px]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="IEL Assets/header_bottom_logo_3.png"
+                          alt="Logo 3"
+                          class="w-[114px] h-[40px]"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="relative w-full xl:w-[538px] h-[382px]">
+                      <!-- <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -left-10 top-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/header_img_bg_pattern.svg"
+                        alt="Background Pattern"
+                        class="absolute -top-16 -right-24 h-[550px]"
+                        loading="lazy"
+                      />
+                      <!-- <img
+                        src="IEL Assets/header_side_img_bg.png"
+                        alt="Background Image"
+                        class="absolute top-0 left-0 w-[558px] h-[402px] z-10"
+                        loading="lazy"
+                      />
+                      <img
+                        src="IEL Assets/header_side_img.png"
+                        alt="Foreground Image"
+                        class="absolute top-[20px] left-[20px] w-[498px] h-[362px] z-20"
+                        loading="lazy"
+                      /> -->
+                      <!-- <div
+                        style="
+                          background: linear-gradient(
+                            180deg,
+                            #281f68 0%,
+                            #1b153b 100%
+                          );
+                          border: 1px solid #1d163f;
+                          box-shadow: 4px 0px 16px 0px #ffffff1a;
+                          border-radius: 8px;
+                        "
+                        class="absolute -right-10 -bottom-10 z-30 text-white"
+                      >
+                        <p class="p-[24px]">
+                          Insightful Research <br />
+                          Reports about work
+                        </p>
+                      </div> -->
+                      <img
+                        src="IEL Assets/partners/new_header_frame.png"
+                        alt="Header Frame"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col md:hidden items-center">
+                    <a
+                      class="py-3 flex justify-center items-center rounded-[4px] bg-[#E3442D] text-white font-[600] text-[16px] w-[263px]"
+                      href="OpenAccount.html"
+                      target="_blank"
+                    >
+                      Open an Account
+                    </a>
+                    <a
+                      class="bg-[#58BA83] text-white py-3 flex justify-center items-center rounded-[4px] font-[600] text-[16px] w-[263px] mt-[24px]"
+                      href="Contact.html"
+                    >
+                      Book a Free Consultation
+                    </a>
+                  </div>
+
+                  <div class="block md:hidden mt-[32px] text-center">
+                    <span
+                      class="font-[500] text-[20px] leading-[28px] text-[#6E6E6E]"
+                      >Associated companies:</span
+                    >
+                    <br />
+
+                    <div
+                      class="flex justify-between w-full md:w-[400px] mt-[20px]"
+                    >
+                      <img
+                        src="IEL Assets/new_logo.png"
+                        alt="New Logo"
+                        loading="lazy"
+                        class="w-[65px] h-[40px]"
+                      />
+                      <img
+                        src="IEL Assets/header_bottom_logo_2.png"
+                        alt="Logo 2"
+                        loading="lazy"
+                        class="w-[45px] h-[40px]"
+                      />
+                      <img
+                        src="IEL Assets/header_bottom_logo_3.png"
+                        alt="Logo 3"
+                        loading="lazy"
+                        class="w-[114px] h-[40px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu menu_home h-[100px]">
+          <div
+            class="h-[24px] bg-[#e3442d] text-white flex justify-center items-center text-center px-[3rem] text-[12px] sm:px-4 auto-scroll relative"
+          >
+            <div class="auto-scroll-content">
+              Our brokerage is proudly rated BFR 2 & Entity Rating Long Term A-
+              and Short Term A-2 by VIS Credit Rating Company —
+              <a
+                href="IEL Assets/PDF/Rating/ENTITY 2025.pdf"
+                target="_blank"
+                class="underline me-1"
+              >
+                View Full Entity Rating
+              </a>
+              <span>|</span>
+              <a
+                href="IEL Assets/PDF/Rating/OP_01044604005_00010446.pdf"
+                target="_blank"
+                class="underline ms-1"
+              >
+                <!-- Learn About the Credit Rating -->
+                View Full BFR Rating
+              </a>
+            </div>
+          </div>
+          <nav
+            class="h-[76px] pt-[10px] bg-white -mt-[20px] w-full z-50 px-0 md:px-[3rem]"
+          >
+            <div
+              class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
+            >
+              <div class="flex-shrink-0">
+                <a href="index.html">
+                  <img
+                    src="IEL Assets/partners/BlackLogoSvg.svg"
+                    alt="IEL Logo"
+                    loading="lazy"
+                    class="h-[52px] w-[103px]"
+                  />
+                </a>
+              </div>
+              <!-- <div class="flex-shrink-0 xl:hidden flex items-center">
+                <a href="index.html">
+                  <img
+                    src="IEL Assets/new_logo.png"
+                    alt="Change Agency Logo"
+                    class="h-[50px] w-[100px]"
+                    loading="lazy"
+                  />
+                </a>
+              </div> -->
+
+              <div class="hidden xl:flex items-center space-x-10">
+                <!-- <a
+                  href=""
+                  class="text-white text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  WHAT WE OFFER
+                </a> -->
+                <div class="relative group">
+                  <button
+                    class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  >
+                    WHAT WE OFFER
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    class="absolute left-0 w-48 bg-black rounded-lg shadow-xl hidden group-hover:block z-10"
+                    style="backdrop-filter: blur(4px)"
+                  >
+                    <a
+                      href="BrokerageService.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Brokerage
+                    </a>
+
+                    <a
+                      href="StrategyConsulting.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Strategy Consulting
+                    </a>
+
+                    <a
+                      href="FinancialAdvisory.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Financial Advisory
+                    </a>
+
+                    <a
+                      href="RealStateAdvisory.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Real Estate
+                    </a>
+
+                    <a
+                      href="FintechService.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Fintech Solutions
+                    </a>
+                  </div>
+                </div>
+                <div class="relative group">
+                  <button
+                    class="text-balck text-base font-[600] uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  >
+                    INVESTORS INFORMATION
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    class="absolute left-0 w-48 bg-black rounded-lg shadow-xl hidden group-hover:block z-10"
+                    style="backdrop-filter: blur(4px)"
+                  >
+                    <a
+                      href="Regulatory.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Regulatory Information
+                    </a>
+                    <a
+                      href="NewReport.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Financial Statements
+                    </a>
+
+                    <a
+                      href="Investor_education.html"
+                      class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Investor Education
+                    </a>
+                  </div>
+                </div>
+                <a
+                  href="Research.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  RESEARCH REPORTS
+                </a>
+                <a
+                  href="About.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  ABOUT US
+                </a>
+                <a
+                  href="Resources.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  LEARN
+                </a>
+                <a
+                  href="Contact.html"
+                  class="text-black text-base font-[600] uppercase opacity-75 hover:opacity-100 transition"
+                >
+                  CONTACT US
+                </a>
+
+                <!-- <div class="flex items-center">
+                  <a
+                    class="bg-white py-3 px-8 rounded-[4px] text-white font-[700] text-[16px] uppercase"
+                    href="https://meetings.hubspot.com/jessica-brennan"
+                    target="_blank"
+                  >
+                    GET A CONSULTATION
+                  </a>
+                </div> -->
+              </div>
+              <div class="block xl:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                  <img
+                    src="IEL Assets/hamburger_button.png"
+                    alt="Menu"
+                    loading="lazy"
+                    class="w-[24px] h-[24px]"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div
+              id="mobile-menu"
+              class="hidden xl:hidden bg-white px-4 py-6 rounded-[6px]"
+            >
+              <hr />
+              <div class="flex flex-col space-y-4 mt-[20px]">
+                <div>
+                  <button
+                    id="resources-toggle"
+                    class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex justify-between items-center w-full"
+                  >
+                    <span class="flex items-center">
+                      <span
+                        ><img
+                          src="IEL Assets/what_we_offer_icon.png"
+                          alt="What We Offer"
+                          class="w-[16px] h-[16px] me-4"
+                          loading="lazy"
+                      /></span>
+                      What We Offer
+                    </span>
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    id="resources-dropdown"
+                    class="hidden mt-2 w-full bg-[#FFFFFF1A] py-4 rounded-lg"
+                  >
+                    <a
+                      href="BrokerageService.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Brokerage</a
+                    >
+                    <a
+                      href="StrategyConsulting.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Strategy Consulting</a
+                    >
+                    <a
+                      href="FinancialAdvisory.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                      >Financial Advisory
+                    </a>
+
+                    <a
+                      href="RealStateAdvisory.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                      >Real Estate
+                    </a>
+
+                    <a
+                      href="FintechService.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                      >FinTech Solution
+                    </a>
+                  </div>
+                </div>
+                <!-- <a
+                  href="whoweare.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  ><span
+                    ><img
+                      src="IEL Assets/investor_icon.png"
+                      alt="Investor Icon"
+                      class="w-[16px] h-[16px] me-4"
+                      loading="lazy"
+                  /></span>
+                  INVESTORS INFORMATION</a
+                > -->
+                <div>
+                  <button
+                    id="investor-toggle"
+                    class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex justify-between items-center w-full"
+                  >
+                    <span class="flex items-center">
+                      <span>
+                        <img
+                          src="IEL Assets/what_we_offer_icon.png"
+                          alt="What we offer"
+                          class="w-[16px] h-[16px] me-4"
+                          loading="lazy"
+                        />
+                      </span>
+                      INVESTORS INFORMATION
+                    </span>
+                    <svg
+                      class="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    id="investor-dropdown"
+                    class="hidden mt-2 w-full bg-[#FFFFFF1A] py-4 rounded-lg"
+                  >
+                    <a
+                      href="Regulatory.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Regulatory Information</a
+                    >
+                    <a
+                      href="NewReport.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Financial Statements</a
+                    >
+                    <a
+                      href="Investor_education.html"
+                      class="block px-4 py-2 text-black text-sm font-normal uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
+                    >
+                      Investor Education</a
+                    >
+                  </div>
+                </div>
+                <a
+                  href="Research.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                >
+                  <span
+                    ><img
+                      src="IEL Assets/about_us_icon.png"
+                      alt="Research Icon"
+                      class="w-[16px] h-[16px] me-4"
+                      loading="lazy"
+                  /></span>
+                  RESEARCH REPORTS</a
+                >
+                <a
+                  href="About.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                >
+                  <span
+                    ><img
+                      src="IEL Assets/about_us_icon.png"
+                      alt="About Us Icon"
+                      class="w-[16px] h-[16px] me-4"
+                      loading="lazy"
+                  /></span>
+                  ABOUT US</a
+                >
+                <a
+                  href="Resources.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  ><span
+                    ><img
+                      src="IEL Assets/learn_icon.png"
+                      alt="Learn Icon"
+                      class="w-[16px] h-[16px] me-4"
+                      loading="lazy"
+                  /></span>
+                  LEARN</a
+                >
+                <a
+                  href="Contact.html"
+                  class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex items-center"
+                  ><span
+                    ><img
+                      src="IEL Assets/contact_icon.png"
+                      alt="Contact Us Icon"
+                      class="w-[16px] h-[16px] me-4"
+                      loading="lazy"
+                  /></span>
+                  CONTACT US</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </main>
+    </div>
+
+    <!------------------------- Tab Section ------------------------->
+    <div class="mt-[28px] md:mt-[100px] mx-[16px] md:mx-[7vw]">
+      <h2
+        class="font-[600] text-[28px] md:text-[40px] leading-[100%] md:leading-[64px] text-[#000000] text-center"
+      >
+        Open Your Account in Minutes
+      </h2>
+      <div
+        class="text-[#00000080] font-[500] text-[16px] md:text-[20px] leading-[100%] text-center mt-[20px]"
+      >
+        Experience fast, secure, and seamless onboarding.
+      </div>
+      <div class="flex justify-center">
+        <div class="flex mt-[48px]">
+          <button
+            id="core-team-tab"
+            class="tab-button rounded-tl-[12px] rounded-bl-[12px] text-[15px] font-[600] px-[12px] md:px-[40px] py-[8px] md:py-[16px] active_tab"
+          >
+            Sahulat (Easy) Account
+          </button>
+          <button
+            id="board-members-tab"
+            class="tab-button account_button text-[15px] px-[12px] md:px-[40px] py-[8px] md:py-[16px] font-[600]"
+          >
+            Individual Account
+          </button>
+          <button
+            id="corporate-tab"
+            class="tab-button account_button rounded-tr-[12px] rounded-br-[12px] text-[15px] px-[12px] md:px-[40px] py-[8px] md:py-[16px] font-[600]"
+          >
+            Corporate Account
+          </button>
+        </div>
+      </div>
+
+      <!-- Core Team Content -->
+      <div
+        id="core-team-content"
+        class="team-content mt-[60px] 2xl:mx-[5vw] 4xl:mx-[10vw]"
+      >
+        <div class="hidden md:flex justify-start items-start">
+          <img
+            src="IEL Assets/top_of cards.png"
+            alt="Top of Cards"
+            class="w-[331px] h-[71px] ms-[132px]"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex justify-between items-center overflow-x-scroll">
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_1.png"
+              alt="Step 1 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 1
+            </div>
+
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Fill in Your Basics
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Complete our simple sign-up form with your basic information.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_2.png"
+              alt="Step 2 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 2
+            </div>
+
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Verify with OTP
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Enter the one-time password sent to your registered mobile number.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_3.png"
+              alt="Step 3 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 3
+            </div>
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Submit Your NIC
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Upload your National Identity Card for quick verification to get
+              started.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_4.png"
+              alt="Step 4 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 4
+            </div>
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Receive Account Info
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Check your registered email for account credentials and next
+              steps.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+        </div>
+        <div class="hidden md:flex justify-end items-end">
+          <img
+            src="IEL Assets/bottom_of_cards.png"
+            alt="Bottom of Cards"
+            class="w-[331px] h-[71px] items-end me-[132px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Board Members Content (Hidden by default) -->
+      <div
+        id="board-members-content"
+        class="team-content hidden mt-[60px] 2xl:mx-[5vw] 4xl:mx-[10vw]"
+      >
+        <div class="hidden md:flex justify-start items-start">
+          <img
+            src="IEL Assets/top_of cards.png"
+            alt="Top of Cards"
+            class="w-[331px] h-[71px] ms-[132px]"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex justify-between items-center overflow-x-scroll">
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_1.png"
+              alt="Step 1 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 1
+            </div>
+
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Fill in Your Basics
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Complete our simple sign-up form with your basic information.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_2.png"
+              alt="Step 2 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 2
+            </div>
+
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Verify with OTP
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Enter the one-time password sent to your registered mobile number.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_3.png"
+              alt="Step 3 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 3
+            </div>
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Submit Your Details
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Upload your ID and documents to complete verification.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[276px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_4.png"
+              alt="Step 4 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 4
+            </div>
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Receive Account Info
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Check your registered email for account credentials and next
+              steps.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+        </div>
+        <div class="hidden md:flex justify-end items-end">
+          <img
+            src="IEL Assets/bottom_of_cards.png"
+            alt="Bottom of Cards"
+            class="w-[331px] h-[71px] items-end me-[132px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div
+        id="corporate-content"
+        class="team-content hidden mt-[60px] 2xl:mx-[5vw] 4xl:mx-[10vw]"
+      >
+        <div class="hidden md:flex justify-start items-start">
+          <img
+            src="IEL Assets/top_of cards.png"
+            alt="Top of Cards"
+            class="w-[331px] h-[71px] ms-[132px]"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex justify-between items-center overflow-x-scroll">
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[286px] min-w-[281px] md:max-w-[281px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_1.png"
+              alt="Step 1 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 1
+            </div>
+
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Tell Us About Your Business
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Fill out the form, get a call from a specialist within 30 minutes.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[286px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_2.png"
+              alt="Step 2 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 2
+            </div>
+
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Upload Your Documents
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Get a customized checklist, document gathering support, and
+              template assistance (e.g., board resolution).
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[286px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_3.png"
+              alt="Step 3 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 3
+            </div>
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Set Up Your Team
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Set custom trading limits and controls with a scheduled call for
+              personalized setup.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+          <div
+            class="bg-[#ffffff] border border-[#D8D9D880] py-[20px] px-[18px] rounded-[8px] h-[286px] min-w-[281px] md:max-w-[281px] ms-[16px]"
+            style="box-shadow: 0px 8px 16px 0px #0000000f"
+          >
+            <img
+              src="IEL Assets/tab_icon_4.png"
+              alt="Step 4 Icon"
+              class="w-[40px] h-[40px]"
+              loading="lazy"
+            />
+            <div
+              class="text-[#00000066] mt-[24px] font-[800] text-[14px] leading-[100%]"
+            >
+              STEP 4
+            </div>
+            <div
+              class="text-[#6E6E6E] font-[500] text-[20px] leading-[28px] mt-[16px]"
+            >
+              Start Trading
+            </div>
+            <p class="mt-[4px] font-[500] text-[20px] leading-[100%]">
+              Personalized team training and hands-on support for
+              your first trades.
+            </p>
+            <hr class="mt-[32px] border-[#EA5B29] border-1" />
+          </div>
+        </div>
+        <div class="hidden md:flex justify-end items-end">
+          <img
+            src="IEL Assets/bottom_of_cards.png"
+            alt="Bottom of Cards"
+            class="w-[331px] h-[71px] items-end me-[132px]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center">
+        <a href="OpenAccount.html">
+          <button
+            class="mt-[24px] bg-[#E3442D] py-[20px] px-[60px] md:px-0 md:w-[464px] rounded-[4px] text-white"
+          >
+            Get Started Here
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- -----------------------------Big News------------------ -->
+    <div
+      class="mt-[28px] md:mt-[80px] px-[16px] md:px-[7vw] py-[28px] md:py-[64px] bg-[#F9F9F9]"
+    >
+      <div class="w-full max-w-[1400px] mx-auto">
+        <div class="flex flex-col-reverse lg:flex-row">
+          <div
+            class="w-full lg:w-[50%] flex flex-col justify-center lg:justify-start items-center lg:items-start"
+          >
+            <img
+              src="IEL Assets/Big_News.png"
+              alt="Big News"
+              class="w-[400px] h-[380px]"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="w-full lg:w-[50%] text-black mt-10 flex flex-col justify-center lg:justify-start text-center lg:text-start items-center lg:items-start"
+          >
+            <span
+              class="bg-white px-[20px] py-[12px] rounded-full text-[16px] font-[600] leading-[100%]"
+              style="box-shadow: 0px 2px 12px 0px #0000000f"
+            >
+              Quick News
+            </span>
+            <h2
+              class="pt-[30px] text-[28px] md:text-[40px] font-[600] leading-[100%]"
+            >
+              Big News, Bold Moves
+            </h2>
+            <p
+              class="mt-[16px] font-[500] text-[16px] md:text-[24px] italic leading-[100%]"
+            >
+              Major market move in progress.
+            </p>
+            <!-- <p
+              class="mt-[16px] text-[#6E6E6E] font-[500] text-[16px] md:text-[20px] leading-[28px]"
+            >
+            
+              Fauji Cement and KAPCO Announce Public Offer to Acquire 7.97%
+              Stake and Joint Control of Attock Cement Pakistan Limited
+           
+            </p>
+            <div class="flex flex-col md:flex-row justify-between">
+              <a href="IEL Assets/PDF/fauji_cement.pdf" target="_blank">
+                <button
+                  class="mt-[40px] bg-[#E3442D] py-[16px] px-[88px] md:px-0 md:w-[205px] rounded-[4px] text-white flex justify-center items-center"
+                >
+                  <span
+                    ><img
+                      src="IEL Assets/download_icon.png"
+                      alt="Download Icon"
+                      class="w-[24px] h-[24px]"
+                      loading="lazy"
+                  /></span>
+                  <span class="ms-[8px]"> Download</span>
+                </button>
+              </a>
+              <a href="News.html">
+                <button
+                  class="mt-[40px] bg-[#E3442D] py-[16px] px-[88px] md:px-0 md:w-[205px] md:ml-2 rounded-[4px] text-white flex justify-center items-center"
+                >
+                  <span class="ms-[8px]"> View More</span>
+                </button>
+              </a>
+            </div> -->
+
+            <p
+              id="latest-news-desc"
+              class="mt-[16px] text-[#6E6E6E] font-[500] text-[16px] md:text-[20px] leading-[28px]"
+            >
+              <!-- Fauji Cement and KAPCO Announce Public Offer to Acquire 7.97%
+              Stake and Joint Control of Attock Cement Pakistan Limited -->
+              Loading latest update...
+            </p>
+            <div class="flex flex-col md:flex-row justify-between">
+              <a id="latest-news-pdf" href="#" target="_blank">
+                <button
+                  class="mt-[40px] bg-[#E3442D] py-[16px] px-[88px] md:px-0 md:w-[205px] rounded-[4px] text-white flex justify-center items-center"
+                >
+                  <span
+                    ><img
+                      src="IEL Assets/download_icon.png"
+                      alt="Download Icon"
+                      class="w-[24px] h-[24px]"
+                      loading="lazy"
+                  /></span>
+                  <span class="ms-[8px]"> Download</span>
+                </button>
+              </a>
+              <a href="News.html">
+                <button
+                  class="mt-[40px] bg-[#E3442D] py-[16px] px-[88px] md:px-0 md:w-[205px] md:ml-2 rounded-[4px] text-white flex justify-center items-center"
+                >
+                  <span class="ms-[8px]"> View More</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------See Your Potential------------>
+    <!-- <div
+      class="mt-[80px] pt-[40px] px-[7vw] hidden"
+      style="background: linear-gradient(93.15deg, #0e0c15 0%, #1a1538 100%)"
+    >
+      <div class="w-full max-w-[1400px] mx-auto">
+        <div class="flex flex-col justify-center items-center text-white">
+          <h2 class="text-[40px] font-[600] leading-[100%]">
+            See Your Potential
+          </h2>
+          <p class="mt-[20px] font-[500] text-[20px] leading-[28px]">
+          
+          </p>
+        </div>
+        <div class="mt-[40px] flex">
+          <div class="py-[63px] w-[50%]">
+            <div class="text-white w-[550px]">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="mb-4">
+                  <label class="block text-[16px] font-[500] text-white"
+                    >Initial Deposit</label
+                  >
+                  <input
+                    type="text"
+                    value="Rs. 5000/-"
+                    class="w-full p-2 bg-white rounded text-black mt-[8px] outline-none"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="block text-[16px] font-[500] text-white"
+                    >Contributions</label
+                  >
+                  <input
+                    type="text"
+                    value="Rs. 1000/-"
+                    class="w-full p-2 bg-white rounded text-black mt-[8px] outline-none"
+                  />
+                </div>
+              </div>
+           <div class="mt-[28px]">
+                <label class="block text-[16px] font-[500] mb-[8px]"
+                  >Years to Grow</label
+                >
+                <input
+                  type="range"
+                  min="0"
+                  max="50"
+                  value="25"
+                  class="w-full h-[5px] bg-[#E3442D] accent-[#E3442D]"
+                />
+              </div>
+              <div class="grid grid-cols-2 mt-[28px]">
+                <div>
+                  <label
+                    class="block text-[16px] font-[500] text-white mb-[8px]"
+                    >Annual Average Return</label
+                  >
+                  <input
+                    type="text"
+                    value="10%"
+                    class="w-full p-2 bg-white text-black rounded outline-none"
+                  />
+                </div>
+              </div>
+              <button
+                class="w-[177px] bg-[#E3442D] mt-[48px] py-[16px] rounded-[4px] text-white"
+              >
+                Calculate Estimate
+              </button>
+            </div>
+          </div>
+
+          <div class="text-white w-[50%]">
+            <div class="flex flex-col justify-center items-center text-center">
+              <p class="font-[500] text-[12px] leading-[100%]">
+                Potential Future Balance
+              </p>
+              <p class="mt-[4px] font-[600] text-[32px] leading-[100%]">
+                Rs 100,000/-
+              </p>
+              <img
+                src="IEL Assets/graph_img.png"
+                alt="Graph Image"
+                class="h-[435px] w-[562px] mt-[20px]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- ------------------------------Services Section------------------- -->
+    <div class="mt-[28px] md:mt-[80px] mx-[16px] md:mx-[7vw]">
+      <div class="w-full max-w-[1400px] mx-auto">
+        <div class="container mx-auto">
+          <h2
+            class="text-[28px] md:text-[40px] font-[600] leading-[100%] text-center px-[10px] xl:px-0"
+          >
+            Services that keep your money moving forward
+          </h2>
+
+          <div class="mt-[24px] md:mt-[48px]">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div
+                style="
+                  background: linear-gradient(
+                    111.55deg,
+                    #ffffff 4.82%,
+                    rgba(255, 244, 240, 0.2) 109.94%
+                  );
+                  border: 1px solid #00000014;
+                "
+                class="px-[20px] py-[20px] rounded-[16px] flex flex-col justify-center items-center text-center"
+              >
+                <img
+                  src="IEL Assets/card_icon_1.png"
+                  alt="Card Icon 1"
+                  class="w-[53px] h-[53px]"
+                  loading="lazy"
+                />
+                <h2
+                  class="mt-[16px] md:mt-[24px] font-[700] text-[18px] md:text-[24px] leading-[100%]"
+                >
+                  Brokerage
+                </h2>
+                <p
+                  class="mt-[4px] md:mt-[10px] text-[14px] md:text-[20px] font-[600] leading-[100%] text-[#6E6E6E]"
+                >
+                  Invest with confidence, not confusion
+                </p>
+                <p
+                  class="text-[#00000099] font-[500] text-[12px] md:text-[16px] leading-[150%] mt-[8px] md:mt-[16px]"
+                >
+                  Whether you're taking your first steps in the market or
+                  executing complex trades, we make investing clear, reliable,
+                  and surprisingly simple.
+                </p>
+                <a href="BrokerageService.html">
+                  <p
+                    class="text-[#EA5B29] font-[700] text-[14px] md:text-[16px] mt-[16px]"
+                  >
+                    LEARN MORE >
+                  </p>
+                </a>
+              </div>
+              <div
+                style="
+                  background: linear-gradient(
+                    111.55deg,
+                    #ffffff 4.82%,
+                    rgba(255, 244, 240, 0.2) 109.94%
+                  );
+                  border: 1px solid #00000014;
+                "
+                class="px-[20px] py-[20px] rounded-[16px] mt-[20px] md:mt-0 md:ms-[32px] flex flex-col justify-center items-center text-center"
+              >
+                <img
+                  src="IEL Assets/card_icon_2.png"
+                  alt="Strategy Consulting Icon"
+                  class="w-[53px] h-[53px]"
+                  loading="lazy"
+                />
+                <h2
+                  class="mt-[16px] md:mt-[24px] font-[700] text-[18px] md:text-[24px] leading-[100%]"
+                >
+                  Strategy Consulting
+                </h2>
+                <p
+                  class="mt-[4px] md:mt-[10px] text-[14px] md:text-[20px] font-[600] leading-[100%] text-[#6E6E6E]"
+                >
+                  No cookie-cutter solutions here
+                </p>
+                <p
+                  class="text-[#00000099] font-[500] text-[12px] md:text-[16px] leading-[150%] mt-[8px] md:mt-[16px]"
+                >
+                  Securing smart, fruitful long-term investments for individuals
+                  and corporate clients. Unbelievably easy to use for brand new
+                  investors and mature traders alike
+                </p>
+                <a href="StrategyConsulting.html">
+                  <p
+                    class="text-[#EA5B29] font-[700] text-[14px] md:text-[16px] mt-[16px]"
+                  >
+                    LEARN MORE >
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 mt-[32px]">
+              <div
+                style="
+                  background: linear-gradient(
+                    111.55deg,
+                    #ffffff 4.82%,
+                    rgba(255, 244, 240, 0.2) 109.94%
+                  );
+                  border: 1px solid #00000014;
+                "
+                class="px-[20px] py-[20px] rounded-[16px] flex flex-col justify-center items-center text-center"
+              >
+                <img
+                  src="IEL Assets/card_icon_3.png"
+                  alt="Financial Advisory & Fundraising Icon"
+                  class="w-[53px] h-[53px]"
+                  loading="lazy"
+                />
+                <h2
+                  class="mt-[16px] md:mt-[24px] font-[700] text-[18px] md:text-[24px] leading-[100%]"
+                >
+                  Financial Advisory & Fundraising
+                </h2>
+                <p
+                  class="mt-[4px] md:mt-[10px] text-[16px] md:text-[20px] font-[600] leading-[100%] text-[#6E6E6E]"
+                >
+                  You've got big plans. We've got the proven roadmap
+                </p>
+                <p
+                  class="text-[#00000099] font-[500] text-[12px] md:text-[16px] leading-[150%] mt-[8px] md:mt-[16px]"
+                >
+                  Securing smart, fruitful long-term investments for individuals
+                  and corporate clients. Unbelievably easy to use for brand new
+                  investors and mature traders alike
+                </p>
+                <a href="FinancialAdvisory.html">
+                  <p
+                    class="text-[#EA5B29] font-[700] text-[14px] md:text-[16px] mt-[16px]"
+                  >
+                    LEARN MORE >
+                  </p>
+                </a>
+              </div>
+              <div
+                style="
+                  background: linear-gradient(
+                    111.55deg,
+                    #ffffff 4.82%,
+                    rgba(255, 244, 240, 0.2) 109.94%
+                  );
+                  border: 1px solid #00000014;
+                "
+                class="px-[20px] py-[20px] rounded-[16px] mt-[20px] md:mt-0 md:ms-[32px] flex flex-col justify-center items-center text-center"
+              >
+                <img
+                  src="IEL Assets/card_icon_4.png"
+                  alt="Real Estate Icon"
+                  class="w-[53px] h-[53px]"
+                  loading="lazy"
+                />
+                <h2
+                  class="mt-[16px] md:mt-[24px] font-[700] text-[18px] md:text-[24px] leading-[100%]"
+                >
+                  Real Estate
+                </h2>
+                <p
+                  class="mt-[4px] md:mt-[10px] text-[16px] md:text-[20px] font-[600] leading-[100%] text-[#6E6E6E]"
+                >
+                  From land deals to large developments
+                </p>
+                <p
+                  class="text-[#00000099] font-[500] text-[12px] text-[16px] leading-[150%] mt-[8px] md:mt-[16px]"
+                >
+                  Securing smart, fruitful long-term investments for individuals
+                  and corporate clients. Unbelievably easy to use for brand new
+                  investors and mature traders alike
+                </p>
+                <a href="RealStateAdvisory.html">
+                  <p
+                    class="text-[#EA5B29] font-[700] text-[14px] md:text-[16px] mt-[16px]"
+                  >
+                    LEARN MORE >
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 mt-[20px] md:mt-[32px] justify-center md:mx-[200px] xl:mx-[300px]"
+            >
+              <div
+                style="
+                  background: linear-gradient(
+                    111.55deg,
+                    #ffffff 4.82%,
+                    rgba(255, 244, 240, 0.2) 109.94%
+                  );
+                  border: 1px solid #00000014;
+                "
+                class="px-[20px] py-[20px] rounded-[16px] flex flex-col justify-center items-center text-center"
+              >
+                <img
+                  src="IEL Assets/card_icon_5.png"
+                  alt="Fintech & Digital Solutions Icon"
+                  class="w-[53px] h-[53px]"
+                  loading="lazy"
+                />
+                <h2
+                  class="mt-[16px] md:mt-[24px] font-[700] text-[18px] md:text-[24px] leading-[100%]"
+                >
+                  Fintech & Digital Solutions
+                </h2>
+                <p
+                  class="mt-[4px] md:mt-[10px] text-[14px] md:text-[20px] font-[600] leading-[100%] text-[#6E6E6E]"
+                >
+                  Making modern investing feel effortless
+                </p>
+                <p
+                  class="text-[#00000099] font-[500] text-[12px] md:text-[16px] leading-[150%] mt-[8px] md:mt-[16px]"
+                >
+                  Cutting-edge digital tools that make complex financial
+                  processes feel effortless. From AI-powered insights to
+                  seamless trading apps, a whole new way to interact with your
+                  money.
+                </p>
+                <a href="FintechService.html">
+                  <p
+                    class="text-[#EA5B29] font-[700] text-[14px] md:text-[16px] mt-[16px]"
+                  >
+                    LEARN MORE >
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------Access Reports-------------- -->
+    <div class="mt-[28px] md:mt-[80px] overflow-hidden">
+      <div class="relative h-[750px] xl:h-[551px] w-full">
+        <div
+          class="h-[750px] xl:h-[396px] w-[100vw] absolute inset-0 xl:top-[155px]"
+          style="
+            background: linear-gradient(93.15deg, #0e0c15 0%, #1a1538 100%);
+          "
+        ></div>
+        <div class="w-full max-w-[1400px] mx-auto">
+          <!-- Single heading block: mobile = top, centered | xl = bottom, left, pushed right of the image -->
+          <div
+            class="h-[396px] absolute top-0 xl:top-auto xl:bottom-0 w-full z-10 flex flex-col justify-center text-center xl:text-left xl:pl-[700px] xl:pr-[7%]"
+          >
+            <h2
+              class="font-[600] text-[28px] xl:text-[40px] 2xl:text-[36px] leading-[100%] text-[#FFFFFF]"
+            >
+              Market Research that cuts through the noise
+            </h2>
+            <p
+              class="text-[#FAFAFA] mt-[20px] font-[500] text-[16px] xl:text-[20px] leading-[28px] opacity-[80%] mx-[10px] md:mx-10 xl:mx-0 2xl:pe-[100px]"
+            >
+              Skip the confusing industry speak. Our research reports give you
+              actionable insights and real market intelligence you can actually
+              use to make better decisions.
+            </p>
+            <a href="Research.html" class="inset-0">
+              <button
+                class="mt-[48px] bg-[#E3442D] py-[20px] w-[250px] rounded-[4px] text-white"
+              >
+                VIEW REPORTS
+              </button>
+            </a>
+          </div>
+
+          <img
+            src="IEL Assets/partners/ViewReport.svg"
+            alt="View Reports Icon"
+            class="w-full md:w-[580px] xl:w-[620px] h-[343px] xl:h-[551px] absolute z-20 left-[4%] md:left-[17%] xl:left-[4%] 2xl:left-[10%] bottom-0"
+            loading="lazy"
+          />
+
+          <div>
+            <img
+              src="IEL Assets/report_pattern.png"
+              alt="Report Pattern"
+              class="absolute bottom-0 right-0 z-[0] w-[659px] h-[486px]"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------Our Strengths-------------- -->
+    <div class="mt-[28px] md:mt-[80px] mx-[16px] md:mx-[7vw]">
+      <h2
+        class="text-[28px] md:text-[40px] font-[600] leading-[100%] text-center px-[10px] xl:px-0"
+      >
+        Our Strengths
+      </h2>
+      <p
+        class="mt-[10px] md:mt-[20px] font-[500] text-[16px] md:text-[20px] leading-[32px] text-center text-[#00000099]"
+      >
+        Why choose IEL?
+      </p>
+
+      <div class="flex justify-center">
+        <div
+          class="flex flex-col xl:flex-row mt-[16px] md:mt-[48px] rounded-[12px]"
+        >
+          <button
+            id="Expertise-tab"
+            class="strength-button strength_active_tab text-[15px] px-[20px] py-[24px] md:py-[16px] font-[800]"
+          >
+            <span>Expertise </span>
+            <span class="w-[10px] h-[10px] bg-black dot_span"> </span>
+          </button>
+          <button
+            id="Experience-tab"
+            class="strength-button strength_account_button text-[15px] px-[20px] py-[24px] md:py-[16px] font-[800]"
+          >
+            <span>Experience </span>
+            <span class="w-[10px] h-[10px] bg-black dot_span"> </span>
+          </button>
+
+          <button
+            id="Comprehensive-tab"
+            class="strength-button strength_account_button text-[15px] px-[20px] py-[24px] md:py-[16px] font-[800]"
+          >
+            <span>Comprehensive </span>
+            <span class="w-[10px] h-[10px] bg-black dot_span"> </span>
+          </button>
+          <button
+            id="Compliant-tab"
+            class="strength-button strength_account_button text-[15px] px-[20px] py-[24px] md:py-[16px] font-[800]"
+          >
+            <span>Compliant </span>
+            <span class="w-[10px] h-[10px] bg-black dot_span"> </span>
+          </button>
+          <button
+            id="Client-First-tab"
+            class="strength-button strength_account_button text-[15px] font-[800] px-[20px] py-[24px] md:py-[16px]"
+          >
+            <span>Client-First </span>
+            <span class="w-[10px] h-[10px] bg-black dot_span"> </span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="Client-First-content"
+        class="strength-content mx-auto xl:w-[1100px]"
+      >
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div
+            class="mt-[24px] md:mt-10 flex flex-col justify-center xl:justify-start items-center xl:items-start text-ceter xl:text-start"
+          >
+            <h2 class="font-[500] text-[24px] md:text-[40px] leading-[100%]">
+              Client-First
+            </h2>
+            <p
+              class="mt-[12px] md:mt-[32px] text-[#00000099] text-[20px] font-[500] leading-[28px] xl:pe-[40px]"
+            >
+              Your success drives everything we do. Your confidentiality is
+              sacred to us.
+            </p>
+          </div>
+          <div
+            class="mt-3 xl:mt-0 flex justify-center xl:justify-start items-center xl:items-start"
+          >
+            <img
+              src="IEL Assets/expertise/expertise1.jpg"
+              alt="Client-First Image"
+              class="w-[500px] h-[260px] object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="Expertise-content"
+        class="strength-content hidden mx-auto xl:w-[1100px]"
+      >
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div
+            class="mt-[24px] md:mt-10 flex flex-col justify-center xl:justify-start items-center xl:items-start text-ceter xl:text-start"
+          >
+            <h2 class="font-[500] text-[24px] md:text-[40px] leading-[100%]">
+              Expertise
+            </h2>
+            <p
+              class="mt-[12px] md:mt-[32px] text-[#00000099] text-[20px] font-[500] leading-[28px] xl:pe-[40px]"
+            >
+              Years of industry knowledge means insights that actually matter to
+              your business.
+            </p>
+          </div>
+          <div
+            class="mt-3 xl:mt-0 flex justify-center xl:justify-start items-center xl:items-start"
+          >
+            <img
+              src="IEL Assets/expertise/expertise2.jpg"
+              alt="Expertise Image"
+              class="w-[500px] h-[260px] object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="Experience-content"
+        class="strength-content hidden mx-auto xl:w-[1100px]"
+      >
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div
+            class="mt-[24px] md:mt-10 flex flex-col justify-center xl:justify-start items-center xl:items-start text-ceter xl:text-start"
+          >
+            <h2 class="font-[500] text-[24px] md:text-[40px] leading-[100%]">
+              Experience
+            </h2>
+            <p
+              class="mt-[12px] md:mt-[32px] text-[#00000099] text-[20px] font-[500] leading-[28px] xl:pe-[40px]"
+            >
+              Seasoned professionals with real-world knowledge and proven track
+              records.
+            </p>
+          </div>
+          <div
+            class="mt-3 xl:mt-0 flex justify-center xl:justify-start items-center xl:items-start"
+          >
+            <img
+              src="IEL Assets/expertise/expertise3.jpg"
+              alt="Experience Image"
+              class="w-[500px] h-[260px] object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="Comprehensive-content"
+        class="strength-content hidden mx-auto xl:w-[1100px]"
+      >
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div
+            class="mt-[24px] md:mt-10 flex flex-col justify-center xl:justify-start items-center xl:items-start text-ceter xl:text-start"
+          >
+            <h2 class="font-[500] text-[24px] md:text-[40px] leading-[100%]">
+              Comprehensive
+            </h2>
+            <p
+              class="mt-[12px] md:mt-[32px] text-[#00000099] text-[20px] font-[500] leading-[28px] xl:pe-[40px]"
+            >
+              Comprehensive Advisory and brokerage services under one roof.
+              Simple.
+            </p>
+          </div>
+          <div
+            class="mt-3 xl:mt-0 flex justify-center xl:justify-start items-center xl:items-start"
+          >
+            <img
+              src="IEL Assets/expertise/expertise4.jpg"
+              alt="Comprehensive Image"
+              class="w-[500px] h-[260px] object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="Compliant-content"
+        class="strength-content hidden mx-auto xl:w-[1100px]"
+      >
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <div
+            class="mt-[24px] md:mt-10 flex flex-col justify-center xl:justify-start items-center xl:items-start text-ceter xl:text-start"
+          >
+            <h2 class="font-[500] text-[24px] md:text-[40px] leading-[100%]">
+              Compliant
+            </h2>
+            <p
+              class="mt-[12px] md:mt-[32px] text-[#00000099] text-[20px] font-[500] leading-[28px] xlpe-[40px]"
+            >
+              Regulatory excellence since 2007. You can trust us to play by the
+              rules.
+            </p>
+          </div>
+          <div
+            class="mt-3 xl:mt-0 flex justify-center xl:justify-start items-center xl:items-start"
+          >
+            <img
+              src="IEL Assets/expertise/expertise5.jpg"
+              alt="Compliant Image"
+              class="w-[500px] h-[260px] object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------------partner--------------------- -->
+    <div class="mt-[28px] md:mt-[80px]">
+      <h2
+        class="text-[28px] md:text-[40px] font-[600] leading-[100%] text-center px-[16px] xl:px-0"
+      >
+        Who we have worked with:
+      </h2>
+
+      <div
+        class="partner_carousel flex flex-wrap justify-center items-center gap-6 py-[32px] md:py-[48px]"
+      >
+        <div class="w-36 h-36">
+          <img
+            src="IEL Assets/partners/logo_1.png"
+            alt="Partner 1"
+            class="object-contain h-full w-full"
+            loading="lazy"
+          />
+        </div>
+        <div class="w-36 h-36">
+          <img
+            src="IEL Assets/partners/logo_2.png"
+            alt="Partner 2"
+            class="object-contain h-full w-full"
+            loading="lazy"
+          />
+        </div>
+        <div class="w-36 h-36">
+          <img
+            src="IEL Assets/partners/logo_3.png"
+            alt="Partner 3"
+            class="object-contain h-full w-full"
+            loading="lazy"
+          />
+        </div>
+        <div class="w-36 h-36">
+          <img
+            src="IEL Assets/partners/logo_4.png"
+            alt="Partner 4"
+            class="object-contain h-full w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="w-36 h-36">
+          <img
+            src="IEL Assets/partners/logo_5.png"
+            alt="Partner 5"
+            class="object-contain h-full w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------Footer---------------------->
+
+    <div
+      class="mx-[16px] md:mx-[7vw] mt-[190px] md:mt-[150px] h-[180px] md:h-[345px] bg-overlay"
+      style="background: #fafafa"
+    >
+      <div
+        class="py-[16px] md:py-[60px] px-[51px] md:px-[80px] flex justify-center items-center text-center"
+      >
+        <div class="text-black">
+          <h2
+            class="font-[600] text-[18px] md:text-[40px] leading-[120%] md:leading-[100%]"
+          >
+            For Complaints and Feedback
+          </h2>
+          <p
+            class="mt-[4px] md:mt-[24px] font-[500] h-[19px] md:h-auto text-[16px] md:text-[18px] leading-[100%]"
+          >
+            Call at: <span class="text-[#36AD77]"> +92-4235741714-15 </span>
+          </p>
+          <div
+            class="mt-[8px] md:mt-[24px] h-[19px] md:h-auto font-[600] text-[20px] leading-[100%]"
+          >
+            Or
+          </div>
+          <a href="Contact.html">
+            <button
+              class="mt-[12px] md:mt-[24px] bg-[#E3442D] py-[12px] px-[34px] md:px-0 md:py-[16px] md:w-[464px] rounded-[4px] text-white inset-1"
+            >
+              CONTACT US
+            </button>
+          </a>
+        </div>
+
+        <!-- <div class="relative">
+          <img
+            src="IEL Assets/footer_laptop.png"
+            alt=""
+            class="h-[250px] w-[435px] z-[1000] relative"
+          />
+        </div> -->
+        <img
+          src="IEL Assets/report_new_pattern.png"
+          alt="Report Pattern"
+          class="absolute bottom-0 right-0 w-[200px] md:w-[659px] h-[130px] md:h-[486px] z-[-1]"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="footer rounded-t-[10px] md:rounded-t-[0px]">
+      <div class="rounded-b-2xl mx-2 bg-transparent">
+        <div class="container mx-auto">
+          <!-- <div
+            class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 pt-[140px] md:pt-[210px] pb-[64px] justify-between"
+          >
+            <div class="col-span-2 md:col-span-2 lg:col-span-2 pt-4 px-10">
+              <div class="flex">
+                <img
+                  src="IEL Assets/iel_logo.png"
+                  alt="IEL Logo"
+                class="w-[65px] md:w-[185px] h-[40px] md:h-[52px]"
+                loading="lazy"
+                />
+              </div>
+            </div>
+            <div
+              class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[45px] md:mt-0"
+            >
+              <p
+                class="text-[14px] font-[600] mt-[16px] leading-[20px] text-[#FFFFFF]"
+              >
+                Main Navigation
+              </p>
+              <ul class="text-[16px] font-[600] mt-[16px] leading-loose">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About IEL</a></li>
+                <li><a href="OpenAccount.html">Open Account</a></li>
+                <li><a href="OpenAccount.html#Faqs">FAQs</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div
+              class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[45px] md:mt-0"
+            >
+              <p
+                class="text-[14px] font-[600] mt-[16px] leading-[20px] text-[#ffffff]"
+              >
+                Useful Links
+              </p>
+              <ul class="text-[16px] font-[600] mt-[16px] leading-loose">
+                <li><a href="Regulatory.html">Regulatory Information</a></li>
+                <li>
+                  <a href="About.html#Associated_Company"
+                    >Associated Companies</a
+                  >
+                </li>
+                <li><a href="Resources.html#related_forms">Downloads</a></li>
+                <li><a href="newReports.html">Reports & Statements</a></li>
+                <li><a href="">Investor Complaints</a></li>
+                <li><a href="">PSX Complaint Mgmnt</a></li>
+                <li><a href="Privacy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div
+              class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[45px] md:mt-0"
+            >
+              <p
+                class="text-[14px] font-[600] mt-[16px] leading-[20px] text-[#ffffff]"
+              >
+                Contact
+              </p>
+              <ul class="text-[16px] font-[600] mt-[16px] leading-loose">
+                <li><a href="">+92-4235741714-15</a></li>
+                <li><a href="">+92-4235692606</a></li>
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@iel.net.pk"
+                    target="_blank"
+                    >info@iel.net.pk</a
+                  >
+                </li>
+              </ul>
+              <div class="leading-[130%]">
+                <p class="text-[16px] font-[600] mt-[16px]">
+                  30 Cricketers Colony, 3rd floor, NETSOL Avenue, Ghazi
+                  Interchange, Ring Road, Lahore
+                </p>
+                <p class="text-[16px] font-[600] mt-[16px]">
+                  Room# 134, 3rd Floor, KSE Building, Karachi
+                </p>
+              </div>
+             
+            </div>
+          </div> -->
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 pt-[140px] md:pt-[206px] mx-10 pb-[64px] justify-between"
+          >
+            <div
+              class="col-span-2 md:col-span-2 lg:col-span-2 pt-4 px-4 md:px-10"
+            >
+              <div class="flex">
+                <img
+                  src="IEL Assets/partners/whiteLogoSvg.svg"
+                  alt="IEL Logo"
+                  class="w-[65px] md:w-[145px] h-[40px] md:h-[70px]"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div
+              class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[24px] md:mt-0"
+            >
+              <p
+                class="text-[14px] font-[900] mt-[16px] leading-[20px] text-[#FFFFFF]"
+              >
+                Main Navigation
+              </p>
+              <ul class="text-[16px] font-[500] mt-[16px] leading-loose">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About IEL</a></li>
+                <li><a href="OpenAccount.html">Open Account</a></li>
+                <li><a href="OpenAccount.html#Faqs">FAQs</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div
+              class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[24px] md:mt-0"
+            >
+              <p
+                class="text-[14px] font-[900] mt-[16px] leading-[20px] text-[#ffffff]"
+              >
+                Useful Links
+              </p>
+              <ul class="text-[16px] font-[500] mt-[16px] leading-loose">
+                <li><a href="Regulatory.html">Regulatory Information</a></li>
+                <li>
+                  <a href="About.html#Associated_Company"
+                    >Associated Companies</a
+                  >
+                </li>
+                <li><a href="Resources.html#related_forms">Downloads</a></li>
+                <li><a href="NewReport.html">Reports & Statements</a></li>
+                <li><a href="">Investor Complaints</a></li>
+                <li>
+                  <a
+                    href="https://www.psx.com.pk/psx/resources-and-tools/investors/investors-complaints"
+                    target="_blank"
+                    >PSX Complaint Mgmnt</a
+                  >
+                </li>
+                <li>
+                  <a href="https://sdms.secp.gov.pk/" target="_blank"
+                    >SECP Complaint Mgmnt</a
+                  >
+                </li>
+                <li><a href="Privacy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div
+              class="ps-4 md:ps-10 text-[#535862] font-semibold mt-[24px] md:mt-0"
+            >
+              <p
+                class="text-[14px] font-[900] mt-[16px] leading-[20px] text-[#ffffff]"
+              >
+                Contact
+              </p>
+              <ul class="text-[16px] font-[500] mt-[16px] leading-loose">
+                <li><a href="">+92-4235741714-15</a></li>
+                <li><a href="">+92-4235692606</a></li>
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@iel.net.pk"
+                    target="_blank"
+                    >info@iel.net.pk</a
+                  >
+                </li>
+              </ul>
+              <div class="leading-[130%]">
+                <p class="text-[16px] font-[600] mt-[16px]">
+                  30 Cricketers Colony, 3rd floor, NETSOL Avenue, Ghazi
+                  Interchange, Ring Road, Lahore
+                </p>
+                <p class="text-[16px] font-[600] mt-[16px]">
+                  Room# 134, 3rd Floor, KSE Building, Karachi
+                </p>
+              </div>
+              <!-- <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11216.406651584566!2d74.22943439199008!3d31.49303273478952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391902686a66d6a1%3A0xd126df77dd9ca0d!2sThokar%20Niaz%20Baig%2C%20Lahore%2C%20Pakistan!5e1!3m2!1sen!2s!4v1749645230422!5m2!1sen!2s"
+                width="180"
+                height="160"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                class="mt-10"
+              ></iframe> -->
+            </div>
+          </div>
+          <div class="mx-[7vw] text-center pb-10">
+            <h3 class="text-[#FFFFFF]">
+              Smart Stock System — Our Backoffice Software Vendor
+            </h3>
+            <p class="text-[#535862]">
+              At our brokerage, we leverage the Smart Stock System as our
+              trusted backoffice software solution. This system helps ensure
+              efficient trade processing, seamless settlements, and accurate
+              client account management, enabling us to deliver a secure and
+              reliable trading experience for all our customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white mx-7vw">
+      <img src="IEL Assets/disclaimer.png" alt="Disclaimer" loading="lazy" />
+    </div>
+
+    <script>
+      // ----------------------------
+
+      // ==== POPUP LOGIC ====
+      // DUAL POPUP LOGIC - Both visible at the same time
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("dualPopupContainer");
+        if (!container) return;
+
+        const dismissed = localStorage.getItem("dualPopupDismissed");
+        const isHomePage =
+          window.location.pathname === "/" ||
+          window.location.pathname.endsWith("index.html");
+
+        if (isHomePage && !dismissed) {
+          container.classList.remove("hidden");
+        }
+
+        const dontShowA = document.getElementById("dontShowAgainA");
+        const dontShowB = document.getElementById("dontShowAgainB");
+
+        function closeBoth() {
+          container.classList.add("hidden");
+          // If either checkbox is checked → remember for both
+          if (dontShowA?.checked || dontShowB?.checked) {
+            localStorage.setItem("dualPopupDismissed", "true");
+          }
+        }
+
+        document
+          .getElementById("closePopupA")
+          ?.addEventListener("click", closeBoth);
+        document
+          .getElementById("closePopupB")
+          ?.addEventListener("click", closeBoth);
+
+        // Click outside the content area → close both
+        container.addEventListener("click", (e) => {
+          if (e.target === container) {
+            closeBoth();
+          }
+        });
+      });
+      // const popup = document.getElementById("welcomePopup");
+      // const Newpopup = document.getElementById("NewwelcomePopup");
+      // const closeBtn = document.getElementById("closePopup");
+      // const dontShow = document.getElementById("dontShowAgain");
+      // function maybeShowPopup() {
+      //   if (
+      //     window.location.pathname.endsWith("index.html") ||
+      //     window.location.pathname === "/"
+      //   ) {
+      //     const dismissed = localStorage.getItem("ielPopupDismissed");
+      //     if (!dismissed) popup.classList.remove("hidden");
+      //   }
+      // }
+
+      // function closePopup() {
+      //   popup.classList.add("hidden");
+      //   if (dontShow.checked) {
+      //     localStorage.setItem("ielPopupDismissed", "true");
+      //   }
+      // }
+
+      // closeBtn.addEventListener("click", closePopup);
+      // popup.addEventListener("click", (e) => {
+      //   if (e.target === popup) closePopup();
+      // });
+      // document.addEventListener("DOMContentLoaded", maybeShowPopup);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollDiv = document.querySelector(".auto-scroll");
+        const scrollContent = document.querySelector(".auto-scroll-content");
+        let scrollWidth = scrollContent.scrollWidth;
+        let containerWidth = scrollDiv.offsetWidth;
+
+        if (scrollWidth > containerWidth) {
+          let position = 0;
+          const speed = 1; // pixels per frame
+          function scroll() {
+            position -= speed;
+            if (position <= -scrollWidth) position = containerWidth;
+            scrollContent.style.transform = `translateX(${position}px)`;
+            requestAnimationFrame(scroll);
+          }
+          scroll();
+        }
+      });
+      // Typing Text
+      // const textLines = ["Smart moves. Sharp insights. Financial freedom—your way."];
+      // const line1El = document.getElementById("line1");
+      // let lineIndex = 0;
+      // let charIndex = 0;
+
+      // function typeText() {
+      //   if (lineIndex < textLines.length) {
+      //     const currentLine = textLines[lineIndex];
+      //     const targetEl = lineIndex === 0 ? line1El : line2El;
+
+      //     if (charIndex < currentLine.length) {
+      //       targetEl.textContent += currentLine.charAt(charIndex);
+      //       charIndex++;
+      //       setTimeout(typeText, 70); // Speed of typing
+      //     } else {
+      //       // Move to the next line
+      //       lineIndex++;
+      //       charIndex = 0;
+      //       setTimeout(typeText, 70); // Small delay before starting next line
+      //     }
+      //   }
+      // }
+
+      // window.addEventListener("DOMContentLoaded", typeText);
+
+      const textLines = [
+        "Smart moves. Sharp insights. Financial freedom—your way.",
+        "The gap between where you are and where you want to be? We close it.",
+        "151 million shares. Countless success stories. One trusted partner.",
+        "Ready to make your money work harder?",
+      ];
+
+      // Tabs
+      const tabs = document.querySelectorAll(".tab-button");
+      const contents = document.querySelectorAll(".team-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => {
+            t.classList.remove("active_tab");
+            t.classList.add("account_button");
+            t.style.background = "";
+            t.style.border = "";
+          });
+          tab.classList.add("active_tab");
+          tab.classList.remove("account_button");
+          tab.style.background =
+            "linear-gradient(180deg, #f4f4f4 0%, #fefefe 100%)";
+          tab.style.border = "4px solid #ECECEC";
+          contents.forEach((content) => content.classList.add("hidden"));
+
+          // Show the corresponding content
+          const contentId = tab.id.replace("-tab", "-content");
+          document.getElementById(contentId).classList.remove("hidden");
+        });
+      });
+
+      // Strength Tabs
+      const Strength_tabs = document.querySelectorAll(".strength-button");
+      const Strength_contents = document.querySelectorAll(".strength-content");
+
+      Strength_tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          Strength_tabs.forEach((t) => {
+            t.classList.remove("strength_active_tab");
+            t.classList.add("strength_account_button");
+            t.style.background = "";
+            t.style.border = "";
+          });
+          tab.classList.add("strength_active_tab");
+          tab.classList.remove("strength_account_button");
+          // tab.style.background =
+          //   "linear-gradient(180deg, #f4f4f4 0%, #fefefe 100%)";
+          // tab.style.border = "4px solid #ECECEC";
+          Strength_contents.forEach((content) =>
+            content.classList.add("hidden"),
+          );
+
+          // Show the corresponding content
+          const contentId = tab.id.replace("-tab", "-content");
+          document.getElementById(contentId).classList.remove("hidden");
+        });
+      });
+    </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
