@@ -1,0 +1,363 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+<Layout>
+  <Fragment slot="head">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEL | Investor Education</title>
+    <meta
+      name="description"
+      content="Smart moves. Sharp insights. Financial freedom—your way.
+From your first stock pick to your next big acquisition—we're in it with you. IEL brings bespoke brokerage, laser-focused advisory, and strategy consulting under one roof"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Investor Education | Integrated Equities Limited (IEL)"
+    />
+    <meta
+      property="og:description"
+      content="Investor education resources from IEL: guides, risk disclosures, trading terms, and regulatory documents to help you invest with confidence."
+    />
+    <meta
+      property="og:url"
+      content="https://iel.net.pk/Investor_education.html"
+    />
+    <meta
+      property="og:image"
+      content="https://iel.net.pk/Assets/whiteLogoSvg.svg"
+    />
+    <meta property="og:site_name" content="Integrated Equities Limited" />
+    <link rel="canonical" href="https://iel.net.pk/Investor_education.html" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Assets/finalNavbar/navbar.css" />
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <style is:inline>
+      #typed-text span {
+        display: block;
+      }
+      .footer {
+        /* Matches the height of the first div to create overlap */
+        background: linear-gradient(180deg, #0f0d17 0%, #191535 100%);
+      }
+      .bg-overlay {
+        position: relative;
+        z-index: 10;
+        top: -150px;
+      }
+    </style>
+  
+  </Fragment>
+
+    <!-------------------------Hero Section------------------------->
+    <div>
+      <main class="h-[338px] md:h-[338px]">
+        <div class="content h-[338px] md:h-[338px]">
+          <div class="relative w-[100vw] h-[338px]">
+            <div class="container mx-auto">
+              <div
+                class="absolute top-0 left-0 w-full h-full object-cover hidden md:block"
+                style="
+                  background: linear-gradient(
+                    93.15deg,
+                    #0e0c15 0%,
+                    #1a1538 100%
+                  );
+                "
+              ></div>
+              <div
+                class="absolute top-0 left-0 w-full h-full object-cover bg-[#F9F9F9] block md:hidden"
+              ></div>
+              <div
+                class="relative flex flex-col-reverse md:flex-row py-[40px] md:py-[60px] px-[24px] md:px-[42px] lg:px-16 justify-center md:justify-between item-center mt-[10vh] md:mt-[10vh] 3xl:mt-[10vh]"
+              >
+                <div
+                  class="relative text-center md:text-start text-black md:text-white w-full flex flex-col justify-center items-center"
+                  style="z-index: 105"
+                >
+                  <h1
+                    id="typed-text"
+                    class="font-[600] text-[30px] md:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
+                  >
+                    Investor Education
+                  </h1>
+                  <!-- <p
+                    class="font-[400] text-[16px] leading-[24px] mt-[12px] text-center"
+                  >
+                    We dig deep so you don't have to. Clear, actionable insights
+                    that help you make confident investment moves.
+                  </p> -->
+                </div>
+                <img
+                  src="IEL Assets/new_header_pattern.png"
+                  alt="Header Pattern"
+                  class="h-[200px] w-[580px] absolute -right-[100px] hidden md:block"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu h-[80px] pt-[10px] bg-white">
+          <Nav />
+        </div>
+      </main>
+    </div>
+
+    <!------------------------- Tab Section ------------------------->
+    <div class="mt-[60px] md:mt-[80px] mx-[7vw]">
+      <div class="flex justify-center">
+        <div class="flex rounded-[12px] overflow-x-scroll">
+          <button
+            id="Corporate-tab"
+            class="tab-button text-[15px] w-[240px] font-[800] px-[40px] py-[16px] active_tab"
+          >
+            Investor Education
+          </button>
+        </div>
+      </div>
+
+      <!-- Core Team Content -->
+      <div id="Corporate-content" class="team-content mt-[40px] 2xl:mx-[10vw]">
+        <div class="flex justify-between">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Annexure B1 - IEL AMLCFTCPF Policy Approved on 22 March 2024
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Annexure B1 - IEL AMLCFTCPF Policy Approved on 22 March 2024.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Arbitration Regulations English
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Arbitration Regulations English.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Arbitration Regulations Urdu
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Arbitration Regulations Urdu.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Common Terms Urdu
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Common Terms Urdu.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Internet Trading Terms
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Internet Trading Terms.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Investor Guide SECP English
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Investor Guide SECP English.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Investor Guide Urdu
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Investor Guide Urdu.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Order Executions Flow
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Order Executions Flow.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            PSX Invester Awareness Guide Book - Urdu
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/PSX Invester Awareness Guide Book - Urdu.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            PSX-Regulations-October-03-2025-Bonus-and-Right-Issue-Timelines
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/PSX-Regulations-October-03-2025-Bonus-and-Right-Issue-Timelines.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Risk Disclosure
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Risk Disclosure.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Service Level Agreement
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Service Level Agreement.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            Trading Common Terms in English
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/Trading Common Terms in English.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+
+        <div class="flex justify-between mt-[16px]">
+          <p class="text-[20px] leading-[24px] font-[600] text-[#000000E5]">
+            User Manual Soct Tech
+          </p>
+
+          <a
+            href="IEL Assets/PDF/Investor Education/User Manual Soct Tech.pdf"
+            target="_blank"
+            class="text-[#EA5B29] font-[700] text-[16px] leading-[24px]"
+            >Download</a
+          >
+        </div>
+        <hr class="mt-[16px]" />
+      </div>
+    </div>
+
+    <!-------------------------Footer---------------------->
+
+    <Footer extra="mt-[80px]" />
+<script is:inline>
+      // Tabs
+      const tabs = document.querySelectorAll(".tab-button");
+      const contents = document.querySelectorAll(".team-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => {
+            t.classList.remove("active_tab");
+            t.classList.add("account_button");
+            t.style.background = "";
+            t.style.border = "";
+          });
+          tab.classList.add("active_tab");
+          tab.classList.remove("account_button");
+          tab.style.background =
+            "linear-gradient(180deg, #f4f4f4 0%, #fefefe 100%)";
+          tab.style.border = "4px solid #ECECEC";
+          contents.forEach((content) => content.classList.add("hidden"));
+
+          // Show the corresponding content
+          const contentId = tab.id.replace("-tab", "-content");
+          document.getElementById(contentId).classList.remove("hidden");
+        });
+      });
+    </script>
+    <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+    <script is:inline src="index.js"></script>
+  
+</Layout>
