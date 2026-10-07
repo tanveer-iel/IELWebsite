@@ -15,7 +15,7 @@ Newest entries go at the top of each section.
 | Branch | Purpose | Status |
 |---|---|---|
 | `main` | Production base build (`v1.0.0`) | Pushed |
-| `IELAstro` | Work on the Astro-based version of the site | Created 2026-10-07, local only (not yet pushed) |
+| `IELAstro` | Work on the Astro-based version of the site | Created 2026-10-07; exists on GitHub (same commit as `main`), local branch is 1 commit ahead (unpushed) |
 
 ## Releases / tags
 - `v1.0.0` — Base build as handed over by Anwar Farid sb on October 06, 2026. GitHub Release with `IELWebsite-v1.0.0.zip` (~200 MB): https://github.com/tanveer-iel/IELWebsite/releases/tag/v1.0.0
@@ -36,4 +36,4 @@ Newest entries go at the top of each section.
 
 ## Open questions
 - Astro scope: full migration vs scaffold alongside the current site?
-- Push `IELAstro` to GitHub now or after the first commit?
+- Push the unpushed MEMORY.md/README commit on `IELAstro` to GitHub?
