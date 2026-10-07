@@ -1,0 +1,12 @@
+---
+const { bodyAttrs = {}, htmlLang = "en" } = Astro.props;
+---
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <slot name="head" />
+  </head>
+  <body {...bodyAttrs}>
+    <slot />
+  </body>
+</html>

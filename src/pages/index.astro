@@ -1,6 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout>
+  <Fragment slot="head">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <title>Integrated Equities Limited</title> -->
@@ -34,7 +37,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <link
       rel="shortcut icon"
@@ -54,7 +57,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
     />
 
-    <style>
+    <style is:inline>
       #typed-text span {
         display: block;
       }
@@ -213,9 +216,9 @@
         cursor: not-allowed !important;
       }
     </style>
-  </head>
+  
+  </Fragment>
 
-  <body>
     <!-- ==================== POPUP MODAL ==================== -->
     <!-- ==================== SHAREHOLDER AGAHI POPUP ==================== -->
     <!-- <div
@@ -3716,7 +3719,7 @@
       <img src="IEL Assets/disclaimer.png" alt="Disclaimer" loading="lazy" />
     </div>
 
-    <script>
+    <script is:inline>
       // ----------------------------
 
       // ==== POPUP LOGIC ====
@@ -3889,14 +3892,14 @@
         });
       });
     </script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-    <script src="supabase.js"></script>
-    <script src="index.js"></script>
-  </body>
-</html>
+    <script is:inline src="supabase.js"></script>
+    <script is:inline src="index.js"></script>
+  
+</Layout>
