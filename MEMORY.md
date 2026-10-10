@@ -43,6 +43,7 @@ Living project memory. Updated as work progresses, together with [README.md](REA
 - 2026-10-07: Keep this file and README.md updated at each meaningful step.
 
 ## Log
+- 2026-10-10: Header: larger Tezi logo (xl:h-[96px]), desktop menu no-wrap (text-sm, nowrap, dropdowns w-max). Checked in headless Chrome at 1280px. Growing the white bar to fit a 208px logo was tried and reverted (looked wrong).
 - 2026-10-10: **Header/footer now single-source.** `index.astro` uses shared `Nav`/`Footer` (was inline copies). Content standardised on `index.html` from `main` (user rule: home header/footer is the standard). Layout differences are props: `Nav navClass`, `Footer extra` + `padTop`. 21 pages build; home keeps its own spacing. Side effect: shared nav alts are now the home ones (e.g. "Change Agency Logo" — template leftover, worth renaming).
 - 2026-10-10: Reviewed codebase; added `Guides/DEVELOPERS_GUIDE.md` and `.vercelignore` (excludes Guides/, docs, scripts from Vercel uploads). Noted: relative asset paths require all pages at site root; `index.astro` keeps its own nav/footer.
 - 2026-10-07: **Migrated all 21 pages to Astro** on `IELAstro`. Built 21 pages; checked against originals (text, img/a/script/style/div counts, img src, a href, script src) — identical. Preview served pages and assets with HTTP 200.

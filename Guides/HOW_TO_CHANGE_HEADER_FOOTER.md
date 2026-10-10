@@ -30,7 +30,7 @@ The file has two parts. Change **both** when adding or renaming a link:
 Copy an existing link and edit `href` and the text:
 ```html
 <a href="BrokerageService.html"
-   class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition">
+   class="block px-4 py-1 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition">
   Brokerage
 </a>
 ```
@@ -44,7 +44,7 @@ There are **two** logo images, one per file, so a logo change is two edits:
 | Header (`Nav.astro`) | `IEL Assets/partners/BlackLogoSvg.svg` | white bar → needs a dark/coloured logo |
 | Footer (`Footer.astro`) | `IEL Assets/partners/whiteLogoSvg.svg` | dark footer → needs a white/light logo |
 
-**Worked example (applied 2026-10-10):** the Tezi logo now lives at `public/Assets/IELTezi-logo.webp` and both files reference it as `Assets/IELTezi-logo.webp`. The logo is a square badge with its own white background, so it is sized by height only (header `h-[56px] w-auto`, footer `h-[60px] md:h-[90px] w-auto rounded-lg`) and shows as a white badge on the dark footer. The steps below describe how it was done and how to repeat it for another logo.
+**Worked example (applied 2026-10-10):** the Tezi logo now lives at `public/Assets/IELTezi-logo.webp` and both files reference it as `Assets/IELTezi-logo.webp`. The logo is a square badge with its own white background, so it is sized by height only (header `h-[64px] xl:h-[96px] w-auto` — 96px is close to the file's real 208px size but is the most that sits well in the 80px bar; it hangs slightly below it, footer `h-[60px] md:h-[90px] w-auto rounded-lg`) and shows as a white badge on the dark footer. The steps below describe how it was done and how to repeat it for another logo.
 
 1. **Copy the file into `public/`.** Files outside the project folder can't be used, and anything in `public/` is served as-is. Keep names free of spaces:
    ```bash
@@ -64,10 +64,8 @@ Tips:
 - No page links a favicon at the moment (`public/IEL Assets/partners/favicon.png` exists but is unused). Adding one is a separate change in the head of each page.
 - Don't delete the old logo files until you've confirmed nothing references them.
 
-### Stop dropdown items wrapping
-The dropdown panels use `w-48` and each link wraps if the label is long. Fix (apply to every dropdown panel):
-- Panel: `w-48` → `w-max min-w-[12rem]`
-- Each link: add `whitespace-nowrap`
+### Menu items on one line (applied)
+Desktop menu: top-level items use `whitespace-nowrap text-sm 2xl:text-base` with `space-x-5 2xl:space-x-10`, and dropdown panels use `w-max min-w-[12rem]` with `whitespace-nowrap` links, so nothing wraps (checked at 1280px). If you add more items and they crowd, lower the font size or spacing in these classes. The mobile menu (below `xl`, 1280px) is separate.
 
 ### Make dropdown text smaller
 On the link classes change `text-sm` → `text-xs`, and `px-4` → `px-3` for tighter padding.
