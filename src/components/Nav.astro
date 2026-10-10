@@ -1,14 +1,17 @@
-<nav class="top-0 left-0 w-full z-50">
+---
+const { navClass = "top-0 left-0 w-full z-50" } = Astro.props;
+---
+<nav class={navClass}>
             <div
               class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
             >
               <div class="flex-shrink-0">
                 <a href="index.html">
                   <img
-                    src="IEL Assets/partners/BlackLogoSvg.svg"
+                    src="Assets/IELTezi-logo.webp"
                     alt="IEL Logo"
-                    class="h-[52px] w-[103px]"
                     loading="lazy"
+                    class="h-[56px] w-auto"
                   />
                 </a>
               </div>
@@ -16,7 +19,7 @@
                 <a href="index.html">
                   <img
                     src="IEL Assets/new_logo.png"
-                    alt="IEL Logo"
+                    alt="Change Agency Logo"
                     class="h-[50px] w-[100px]"
                     loading="lazy"
                   />
@@ -126,6 +129,7 @@
                     >
                       Financial Statements
                     </a>
+
                     <a
                       href="Investor_education.html"
                       class="block px-4 py-2 text-white text-sm font-[600] uppercase opacity-75 hover:opacity-100 hover:bg-[#F9FAFB21] transition"
@@ -174,8 +178,8 @@
                   <img
                     src="IEL Assets/hamburger_button.png"
                     alt="Menu"
-                    class="w-[24px] h-[24px]"
                     loading="lazy"
+                    class="w-[24px] h-[24px]"
                   />
                 </button>
               </div>
@@ -196,7 +200,7 @@
                       <span
                         ><img
                           src="IEL Assets/what_we_offer_icon.png"
-                          alt="What we offer"
+                          alt="What We Offer"
                           class="w-[16px] h-[16px] me-4"
                           loading="lazy"
                       /></span>
@@ -258,7 +262,7 @@
                   ><span
                     ><img
                       src="IEL Assets/investor_icon.png"
-                      alt="Investor icon"
+                      alt="Investor Icon"
                       class="w-[16px] h-[16px] me-4"
                       loading="lazy"
                   /></span>
@@ -270,13 +274,14 @@
                     class="text-black text-base font-normal uppercase opacity-75 hover:opacity-100 transition flex justify-between items-center w-full"
                   >
                     <span class="flex items-center">
-                      <span
-                        ><img
+                      <span>
+                        <img
                           src="IEL Assets/what_we_offer_icon.png"
                           alt="What we offer"
                           class="w-[16px] h-[16px] me-4"
                           loading="lazy"
-                      /></span>
+                        />
+                      </span>
                       INVESTORS INFORMATION
                     </span>
                     <svg
@@ -325,7 +330,7 @@
                   <span
                     ><img
                       src="IEL Assets/about_us_icon.png"
-                      alt="Research Report"
+                      alt="Research Icon"
                       class="w-[16px] h-[16px] me-4"
                       loading="lazy"
                   /></span>
@@ -338,7 +343,7 @@
                   <span
                     ><img
                       src="IEL Assets/about_us_icon.png"
-                      alt="About us"
+                      alt="About Us Icon"
                       class="w-[16px] h-[16px] me-4"
                       loading="lazy"
                   /></span>
@@ -350,7 +355,7 @@
                   ><span
                     ><img
                       src="IEL Assets/learn_icon.png"
-                      alt="Learn"
+                      alt="Learn Icon"
                       class="w-[16px] h-[16px] me-4"
                       loading="lazy"
                   /></span>
@@ -362,7 +367,7 @@
                   ><span
                     ><img
                       src="IEL Assets/contact_icon.png"
-                      alt="contact"
+                      alt="Contact Us Icon"
                       class="w-[16px] h-[16px] me-4"
                       loading="lazy"
                   /></span>

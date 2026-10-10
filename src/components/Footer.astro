@@ -1,20 +1,20 @@
 ---
-const { extra = "mt-[80px]" } = Astro.props;
+const { extra = "mt-[80px]", padTop = "pt-[60px] md:pt-[100px]" } = Astro.props;
 ---
 <div class={`footer ${extra}`}>
       <div class="rounded-b-2xl mx-2 bg-transparent">
         <div class="container mx-auto">
           <div
-            class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 mx-10 gap-4 pt-[60px] md:pt-[100px] pb-[64px] justify-between"
+            class={`grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 mx-10 gap-4 ${padTop} pb-[64px] justify-between`}
           >
             <div
               class="col-span-2 md:col-span-2 lg:col-span-2 pt-4 px-4 md:px-10"
             >
               <div class="flex">
                 <img
-                  src="IEL Assets/partners/whiteLogoSvg.svg"
+                  src="Assets/IELTezi-logo.webp"
                   alt="IEL Logo"
-                  class="w-[65px] md:w-[145px] h-[40px] md:h-[70px]"
+                  class="w-auto h-[60px] md:h-[90px] rounded-lg"
                   loading="lazy"
                 />
               </div>

@@ -13,8 +13,10 @@ src/layouts/      Layout.astro (html/head/body shell)
 src/components/   Nav.astro, Footer.astro (shared)
 public/           static files served as-is: images, fonts, style.css, JS, Supabase scripts
 scripts/          local-build.sh
+Guides/           developer documentation (not deployed; see .vercelignore)
 astro.config.mjs  static output, build.format = "file" (URLs unchanged)
 vercel.json       security headers
+.vercelignore     keeps Guides/, docs and scripts out of Vercel uploads
 ```
 Dynamic content (blogs, news, research, financial statements) is loaded from Supabase by the scripts in `public/`.
 
@@ -26,6 +28,9 @@ bash scripts/local-build.sh          # build  -> C:/dev/iel-build/dist
 bash scripts/local-build.sh preview  # serve the built site
 ```
 On a normal (non-Drive) checkout you can simply use `npm ci && npm run build`. Vercel builds directly from the repo.
+
+## Developer guide
+[Guides/DEVELOPERS_GUIDE.md](Guides/DEVELOPERS_GUIDE.md) explains the Astro layout, pages and components and how to create/edit them. [Guides/HOW_TO_CHANGE_HEADER_FOOTER.md](Guides/HOW_TO_CHANGE_HEADER_FOOTER.md) covers editing the shared header/footer.
 
 ## Releases
 See the [Releases page](https://github.com/tanveer-iel/IELWebsite/releases) and [CHANGELOG.md](CHANGELOG.md).

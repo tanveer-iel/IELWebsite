@@ -23,10 +23,14 @@ Living project memory. Updated as work progresses, together with [README.md](REA
 ## Astro layout (IELAstro)
 - `src/pages/*.astro` — one per old `.html` page (21). `build.format: "file"` keeps URLs identical (`/About.html`, `/index.html`).
 - `src/layouts/Layout.astro` — `<html>`/`<head>` (via `head` slot)/`<body>`.
-- `src/components/Nav.astro`, `Footer.astro` — shared nav/footer (taken from Terms.html). Footer takes an `extra` class prop (e.g. `mt-[80px]`).
+- `src/components/Nav.astro`, `Footer.astro` — shared nav/footer (content from home page). Nav takes `navClass`; Footer takes `extra` and `padTop`.
 - `public/` — everything served as-is: `Assets/`, `IEL Assets/`, `fonts/`, `style.css`, `home.js`, `index.js`, `supabase*.js`, Google verification file.
 - All `<script>`/`<style>` in pages are `is:inline` so they ship exactly as written.
-- `index.astro` keeps its own inline nav + footer (home nav differs from the other pages).
+- All pages incl. `index.astro` use the shared Nav/Footer; the home page's header/footer (from `main` index.html) is the standard. Never inline a copy.
+
+## Docs
+- `Guides/DEVELOPERS_GUIDE.md` — how the Astro templates work and how to create/edit pages and components. `Guides/` is in `.vercelignore` (not deployed).
+- `Guides/HOW_TO_CHANGE_HEADER_FOOTER.md` — how to edit the single-source header/footer, props, dropdown wrapping fix.
 
 ## Build workflow (IMPORTANT)
 - `node_modules` **cannot** live on Google Drive (npm EBADF errors, junctions unsupported, sync noise).
@@ -39,6 +43,8 @@ Living project memory. Updated as work progresses, together with [README.md](REA
 - 2026-10-07: Keep this file and README.md updated at each meaningful step.
 
 ## Log
+- 2026-10-10: **Header/footer now single-source.** `index.astro` uses shared `Nav`/`Footer` (was inline copies). Content standardised on `index.html` from `main` (user rule: home header/footer is the standard). Layout differences are props: `Nav navClass`, `Footer extra` + `padTop`. 21 pages build; home keeps its own spacing. Side effect: shared nav alts are now the home ones (e.g. "Change Agency Logo" — template leftover, worth renaming).
+- 2026-10-10: Reviewed codebase; added `Guides/DEVELOPERS_GUIDE.md` and `.vercelignore` (excludes Guides/, docs, scripts from Vercel uploads). Noted: relative asset paths require all pages at site root; `index.astro` keeps its own nav/footer.
 - 2026-10-07: **Migrated all 21 pages to Astro** on `IELAstro`. Built 21 pages; checked against originals (text, img/a/script/style/div counts, img src, a href, script src) — identical. Preview served pages and assets with HTTP 200.
 - 2026-10-07: Pushed MEMORY.md + README.md commits to `origin/IELAstro`.
 - 2026-10-07: Created `IELAstro` branch from `main`; created MEMORY.md; rewrote README.md.
