@@ -44,7 +44,7 @@ There are **two** logo images, one per file, so a logo change is two edits:
 | Header (`Nav.astro`) | `IEL Assets/partners/BlackLogoSvg.svg` | white bar → needs a dark/coloured logo |
 | Footer (`Footer.astro`) | `IEL Assets/partners/whiteLogoSvg.svg` | dark footer → needs a white/light logo |
 
-**Worked example (applied 2026-10-10):** the Tezi logo now lives at `public/Assets/IELTezi-logo.webp` and both files reference it as `Assets/IELTezi-logo.webp`. The logo is a square badge with its own white background, so it is sized by height only (header `h-[64px] xl:h-[96px] w-auto` — 96px is close to the file's real 208px size but is the most that sits well in the 80px bar; it hangs slightly below it, footer `h-[60px] md:h-[90px] w-auto rounded-lg`) and shows as a white badge on the dark footer. The steps below describe how it was done and how to repeat it for another logo.
+**Worked example (applied 2026-10-10):** the Tezi logo now lives at `public/Assets/IELTezi-logo.webp`; the version actually used is the cropped `IELTezi-logo-trimmed.webp` (the original has a built-in white rounded border and padding, so it was cropped to the artwork), referenced as `Assets/IELTezi-logo-trimmed.webp`. The logo is a square badge with its own white background, so it is sized by height only (header `h-[64px] xl:h-[68px] w-auto` — the tallest that fits inside the 80px bar, footer `h-[60px] md:h-[90px] w-auto rounded-lg`) and shows as a white badge on the dark footer. The steps below describe how it was done and how to repeat it for another logo.
 
 1. **Copy the file into `public/`.** Files outside the project folder can't be used, and anything in `public/` is served as-is. Keep names free of spaces:
    ```bash
