@@ -10,13 +10,20 @@ const { extra = "mt-[80px]", padTop = "pt-[60px] md:pt-[100px]" } = Astro.props;
             <div
               class="col-span-2 md:col-span-2 lg:col-span-2 pt-4 px-4 md:px-10"
             >
-              <div class="flex">
+              <div class="flex flex-wrap items-center gap-6">
                 <img
                   src="Assets/IELTezi-logo-trimmed.webp"
                   alt="IEL Logo"
                   class="w-auto h-[60px] md:h-[90px] bg-white p-2 rounded-lg"
                   loading="lazy"
                 />
+                <button
+                  type="button"
+                  id="complaint-procedure-btn"
+                  class="text-[16px] font-[600] text-[#FFFFFF] border border-[#535862] hover:border-white rounded-lg px-4 py-2 text-left"
+                >
+                  Procedure for Complaint Handling
+                </button>
               </div>
             </div>
             <div
@@ -125,3 +132,61 @@ const { extra = "mt-[80px]", padTop = "pt-[60px] md:pt-[100px]" } = Astro.props;
     <div class="bg-white mx-7vw">
       <img src="IEL Assets/disclaimer.png" alt="Disclaimer" loading="lazy" />
     </div>
+    <dialog
+      id="complaint-procedure-dialog"
+      class="rounded-xl p-0 w-[92vw] max-w-[900px] backdrop:bg-black/60"
+    >
+      <div class="flex flex-wrap items-center justify-between gap-3 p-4 border-b border-gray-200">
+        <h3 class="text-[18px] font-[700] text-[#0a0a1a]">
+          Procedure for Complaint Handling
+        </h3>
+        <div class="flex flex-wrap items-center gap-2">
+          <a
+            href="docs/Procedure-for-Complaint-Handling-MUFAP.pdf"
+            download="Procedure for Complaint Handling - MUFAP.pdf"
+            class="bg-[#d34534] text-white text-[14px] font-[600] rounded-md px-4 py-2"
+            >Download</a
+          >
+          <a
+            href="docs/Procedure-for-Complaint-Handling-MUFAP.pdf"
+            target="_blank"
+            rel="noopener"
+            class="border border-gray-300 text-[#0a0a1a] text-[14px] font-[600] rounded-md px-4 py-2"
+            >View in Browser Tab</a
+          >
+          <button
+            type="button"
+            id="complaint-procedure-close"
+            class="text-[#0a0a1a] text-[14px] font-[600] rounded-md px-3 py-2"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+      <iframe
+        id="complaint-procedure-frame"
+        title="Procedure for Complaint Handling"
+        class="w-full h-[75vh] bg-white"
+      ></iframe>
+    </dialog>
+    <script is:inline>
+      (function () {
+        var btn = document.getElementById("complaint-procedure-btn");
+        var dlg = document.getElementById("complaint-procedure-dialog");
+        var frame = document.getElementById("complaint-procedure-frame");
+        var close = document.getElementById("complaint-procedure-close");
+        if (!btn || !dlg) return;
+        var src = "docs/Procedure-for-Complaint-Handling-MUFAP.pdf";
+        btn.addEventListener("click", function () {
+          if (!frame.getAttribute("src")) frame.setAttribute("src", src);
+          dlg.showModal();
+        });
+        close.addEventListener("click", function () {
+          dlg.close();
+        });
+        dlg.addEventListener("click", function (e) {
+          if (e.target === dlg) dlg.close();
+        });
+      })();
+    </script>
