@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 ---
+
 <Layout>
   <Fragment slot="head">
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IEL | Regulatory Information</title>
@@ -61,562 +61,560 @@ From your first stock pick to your next big acquisition—we're in it with you. 
         );
       }
     </style>
-  
   </Fragment>
 
-    <!-------------------------Hero Section------------------------->
-    <div>
-      <main class="h-[338px] xl:h-[338px]">
-        <div class="content h-[338px] xl:h-[338px]">
-          <div class="relative w-[100vw] h-[338px]">
-            <div class="container mx-auto">
-              <div
-                class="absolute top-0 left-0 w-full h-full object-cover hidden xl:block"
-                style="
+  <!-------------------------Hero Section------------------------->
+  <div>
+    <main class="h-[338px] xl:h-[338px]">
+      <div class="content h-[338px] xl:h-[338px]">
+        <div class="relative w-[100vw] h-[338px]">
+          <div class="container mx-auto">
+            <div
+              class="absolute top-0 left-0 w-full h-full object-cover hidden xl:block"
+              style="
                   background: linear-gradient(
                     93.15deg,
                     #0e0c15 0%,
                     #1a1538 100%
                   );
                 "
-              ></div>
+            >
+            </div>
+            <div
+              class="absolute top-0 left-0 w-full h-full object-cover bg-[#F9F9F9] block xl:hidden"
+            >
+            </div>
+            <div
+              class="relative flex flex-col-reverse xl:flex-row py-[40px] xl:py-[60px] px-[24px] xl:px-[42px] lg:px-16 justify-center md:justify-between item-center mt-[10vh] md:mt-[10vh] 3xl:mt-[10vh]"
+            >
               <div
-                class="absolute top-0 left-0 w-full h-full object-cover bg-[#F9F9F9] block xl:hidden"
-              ></div>
-              <div
-                class="relative flex flex-col-reverse xl:flex-row py-[40px] xl:py-[60px] px-[24px] xl:px-[42px] lg:px-16 justify-center md:justify-between item-center mt-[10vh] md:mt-[10vh] 3xl:mt-[10vh]"
+                class="relative text-center xl:text-start text-black xl:text-white w-full flex flex-col justify-center items-center"
+                style="z-index: 105"
               >
-                <div
-                  class="relative text-center xl:text-start text-black xl:text-white w-full flex flex-col justify-center items-center"
-                  style="z-index: 105"
+                <h1
+                  id="typed-text"
+                  class="font-[600] text-[28px] xl:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
                 >
-                  <h1
-                    id="typed-text"
-                    class="font-[600] text-[28px] xl:text-[40px] xl:text-[40px] 2xl:text-[40px] leading-[100%] mt-[20px]"
-                  >
-                    Regulatory Information
-                  </h1>
-             
-                </div>
-                <img
-                  src="IEL Assets/new_header_pattern.png"
-                  alt="Header Pattern"
-                  class="h-[200px] w-[580px] absolute -right-[100px] hidden xl:block"
-                  loading="lazy"
-                />
+                  Regulatory Information
+                </h1>
               </div>
+              <img
+                src="IEL Assets/new_header_pattern.png"
+                alt="Header Pattern"
+                class="h-[200px] w-[580px] absolute -right-[100px] hidden xl:block"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="menu h-[80px] pt-[10px] bg-white">
-          <Nav />
-        </div>
-      </main>
-    </div>
+      <div class="menu h-[80px] pt-[10px] bg-white">
+        <Nav />
+      </div>
+    </main>
+  </div>
 
-    <!-- --------------------------Corporate Information---------------- -->
-    <div class="mt-[28px] md:mt-[80px] mx-[16px] md:mx-[7vw]">
-      <div class="w-full max-w-[1400px] mx-auto">
-        <h2
-          class="text-[20px] md:text-[40px] font-[600] leading-[100%] text-black text-center"
-        >
-          Corporate Information
-        </h2>
-        <div
-          class="mt-[24px] md:mt-[48px] flex justify-center items-center pb-[40px]"
-        >
-          <img
-            src="IEL Assets/partners/Regulatory_new_img.png"
-            alt="Regulatory Image"
-            class="w-full h-full md:w-full md:max-w-[1200px] md:h-[531px]"
-            loading="lazy"
-          />
-        </div>
+  <!-- --------------------------Corporate Information---------------- -->
+  <div class="mt-[28px] md:mt-[80px] mx-[16px] md:mx-[7vw]">
+    <div class="w-full max-w-[1400px] mx-auto">
+      <h2
+        class="text-[20px] md:text-[40px] font-[600] leading-[100%] text-black text-center"
+      >
+        Corporate Information
+      </h2>
+      <div
+        class="mt-[24px] md:mt-[48px] flex justify-center items-center pb-[40px]"
+      >
+        <img
+          src="IEL Assets/partners/Regulatory_new_img.png"
+          alt="Regulatory Image"
+          class="w-full h-full md:w-full md:max-w-[1200px] md:h-[531px]"
+          loading="lazy"
+        />
       </div>
     </div>
+  </div>
 
-    <!-- --------------------------Corporate Information---------------- -->
-    <div class="mt-[28px] md:mt-[80px] mx-[16px] md:mx-[7vw]">
-      <div class="w-full max-w-[1400px] mx-auto">
-        <h2
-          class="text-[20px] md:text-[40px] font-[600] leading-[100%] text-black text-center"
+  <!-- --------------------------Corporate Information---------------- -->
+  <div class="mt-[28px] md:mt-[80px] mx-[16px] md:mx-[7vw]">
+    <div class="w-full max-w-[1400px] mx-auto">
+      <h2
+        class="text-[20px] md:text-[40px] font-[600] leading-[100%] text-black text-center"
+      >
+        Corporate Information
+      </h2>
+
+      <div class="mt-[24px] md:mt-[48px] pb-[40px] overflow-x-auto">
+        <table
+          class="w-full border-collapse rounded-[12px] overflow-hidden shadow-lg"
         >
-          Corporate Information
-        </h2>
-
-        <div class="mt-[24px] md:mt-[48px] pb-[40px] overflow-x-auto">
-          <table
-            class="w-full border-collapse rounded-[12px] overflow-hidden shadow-lg"
-          >
-            <tbody>
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+          <tbody>
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Board of Directors</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Board of Directors</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Sardar Ali Wattoo — Chief Executive Officer <br />
-                  Mrs. Sadia Ali — Non-Executive Director <br />
-                  Syed Kashan Hussain Kazmi — Executive Director / Chief
-                  Operating Officer <br />
-                  Mr. Muhammad Iqbal Hussain — Executive Director / Chief
-                  Compliance Officer <br />
-                  Mr. Muhammad Mohsin Nawaz Sabri – Independent Director <br />
-                  Mr. Bashir Ahmed Sheikh – Independent Director <br />
-                  Sed Akbar Naqi Zaidi – Non-Executive Director <br />
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Sardar Ali Wattoo — Chief Executive Officer <br />
+                Mrs. Sadia Ali — Director <br />
+                Syed Kashan Hussain Kazmi — Executive Director / Chief Operating Officer
+                <br />
+                Mr. Muhammad Iqbal Hussain — Executive Director / Chief Compliance
+                Officer <br />
+                Mr. Muhammad Mohsin Nawaz Sabri – Independent Director <br />
+                Mr. Bashir Ahmed Sheikh – Independent Director <br />
+                Sed Akbar Naqi Zaidi – Non-Executive Director <br />
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
-                >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Chairman</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Bashir Ahmed Sheikh – Independent Director
-                </td>
-              </tr>
+              >
+                <span class="text-white font-[600] text-[15px]">Chairman</span>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Bashir Ahmed Sheikh – Independent Director
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Chief Financial Officer</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Chief Financial Officer</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Muhammad Bilal
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Muhammad Bilal
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Company Secretary</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Company Secretary</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Sardar Ali Wattoo
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Sardar Ali Wattoo
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Audit Committee</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Audit Committee</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Muhammad Mohsin Nawaz Sabri, Chairman <br />
-                  Mrs. Sadia Ali, Member <br />
-                  Mr. Syed Akbar Naqi Zaidi, Member <br />
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Muhammad Mohsin Nawaz Sabri, Chairman <br />
+                Mrs. Sadia Ali, Member <br />
+                Mr. Syed Akbar Naqi Zaidi, Member <br />
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >HR & Remuneration Committee</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >HR & Remuneration Committee</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Bashir Ahmed Sheikh, Chairman <br />
-                  Mr. Sardar Ali, Member <br />
-                  Mrs. Sadia Ali, Member <br />
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Bashir Ahmed Sheikh, Chairman <br />
+                Mr. Sardar Ali, Member <br />
+                Mrs. Sadia Ali, Member <br />
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Head of Internal Audit</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Head of Internal Audit</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Muhammad Shahjahan
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Muhammad Shahjahan
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Compliance and Risk Committee</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Compliance and Risk Committee</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
-                >
-                  Mr. Muhammad Mohsin Nawaz Sabri, Chairman <br />
-                  Mrs. Sadia Ali, Member <br />
-                  Mr. Syed Akbar Naqi Zaidi, Member <br />
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
+              >
+                Mr. Muhammad Mohsin Nawaz Sabri, Chairman <br />
+                Mrs. Sadia Ali, Member <br />
+                Mr. Syed Akbar Naqi Zaidi, Member <br />
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Statutory Auditors</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Statutory Auditors</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  BDO Ebrahim & Co., Chartered Accountants <br />
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                BDO Ebrahim & Co., Chartered Accountants <br />
 
-                  Office No. 4, 6th Floor, Askari Corporate Tower, 75/76 D-1,
-                  Main Boulevard Gulberg-III, Lahore <br />
-                  <strong>
-                    Tel: +92 42 3587 5707-10 <br />
-                    Email: info@bdo.com.pk
-                  </strong>
-                </td>
-              </tr>
+                Office No. 4, 6th Floor, Askari Corporate Tower, 75/76 D-1, Main
+                Boulevard Gulberg-III, Lahore <br />
+                <strong>
+                  Tel: +92 42 3587 5707-10 <br />
+                  Email: info@bdo.com.pk
+                </strong>
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Legal Advisors</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Legal Advisors</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
-                >
-                  Imran Anujm Alvi Associates, Advocate Supreme Court Lahore
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
+              >
+                Imran Anujm Alvi Associates, Advocate Supreme Court Lahore
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
-                >
-                  <span class="text-white font-[600] text-[15px]">Bankers</span>
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  Bank Al Habib Limited, Allied Bank Limited, Meezan Bank
-                  Limited, Sindh Bank Limited, JS Bank Limited, Samba Bank
-                  Limited, Bank Alfalah Limited, Bank Makramah Limited
-                </td>
-              </tr>
+              >
+                <span class="text-white font-[600] text-[15px]">Bankers</span>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                Bank Al Habib Limited, Allied Bank Limited, Meezan Bank Limited,
+                Sindh Bank Limited, JS Bank Limited, Samba Bank Limited, Bank
+                Alfalah Limited, Bank Makramah Limited
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Share Registrar</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Share Registrar</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
-                >
-                  COPRLINK (Pvt) Ltd., Wings Arcade, 1-K, Commercial, Model
-                  Town, Lahore
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[#333] text-[14px] leading-[22px]"
+              >
+                COPRLINK (Pvt) Ltd., Wings Arcade, 1-K, Commercial, Model Town,
+                Lahore
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Registered Office</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Registered Office</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                30 Cricketers Colony, 3rd Floor, NETSOL Avenue, Ghazi
+                Interchange, Ring Road, Lahore, Pakistan <br />
+                <strong>
+                  Tel: +92 42 3574 1714-15 · Email: info@iel.net.pk · Web:
+                  www.iel.net.pk</strong
                 >
-                  30 Cricketers Colony, 3rd Floor, NETSOL Avenue, Ghazi
-                  Interchange, Ring Road, Lahore, Pakistan <br />
-                  <strong>
-                    Tel: +92 42 3574 1714-15 · Email: info@iel.net.pk · Web:
-                    www.iel.net.pk</strong
-                  >
-                </td>
-              </tr>
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Karachi Office</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Karachi Office</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[14px] leading-[22px]"
-                >
-                  Room 134, 3rd Floor, KSE Building, Stock Exchange Road,
-                  Karachi<br />
-                  <strong> Tel: +92 42 3569 2606 · www.iel.net.pk </strong>
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[14px] leading-[22px]"
+              >
+                Room 134, 3rd Floor, KSE Building, Stock Exchange Road, Karachi<br
+                />
+                <strong> Tel: +92 42 3569 2606 · www.iel.net.pk </strong>
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Regulatory Status</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Regulatory Status</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  Public limited (unlisted) company — incorporated July 01, 2008
-                  TREC Holder, Pakistan Stock Exchange Limited (Trading and
-                  Self-Clearing category)
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                Public limited (unlisted) company — incorporated July 01, 2008
+                TREC Holder, Pakistan Stock Exchange Limited (Trading and
+                Self-Clearing category)
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Credit Rating</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Credit Rating</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[14px] leading-[22px]"
-                >
-                  Entity: A- (long term) / A-2 (short term) — VIS Credit Rating
-                  Company Limited Broker Fiduciary Rating: BFR-2
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[14px] leading-[22px]"
+              >
+                Entity: A- (long term) / A-2 (short term) — VIS Credit Rating
+                Company Limited Broker Fiduciary Rating: BFR-2
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]">Subsidiary</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Subsidiary</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
-                >
-                  Gulab Online (Private) Limited — 74% shareholding
-                </td>
-              </tr>
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[#333] text-[14px] leading-[22px]"
+              >
+                Gulab Online (Private) Limited — 74% shareholding
+              </td>
+            </tr>
 
-              <tr class="border-b border-[#EDEBE6]">
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+            <tr class="border-b border-[#EDEBE6]">
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Digital Platform</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Digital Platform</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-white text-[14px] leading-[22px]"
-                >
-                  Tezi — digital investing platform · tezi.com.pk
-                </td>
-              </tr>
-              <tr>
-                <td
-                  class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
-                  style="
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-white text-[14px] leading-[22px]"
+              >
+                Tezi — digital investing platform · tezi.com.pk
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="align-top w-[220px] md:w-[260px] px-[20px] py-[18px]"
+                style="
                     background: linear-gradient(
                       93.15deg,
                       #0e0c15 0%,
                       #1a1538 100%
                     );
                   "
+              >
+                <span class="text-white font-[600] text-[15px]"
+                  >Shareholding Pattern</span
                 >
-                  <span class="text-white font-[600] text-[15px]"
-                    >Shareholding Pattern</span
-                  >
-                </td>
-                <td
-                  class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[14px] leading-[22px]"
+              </td>
+              <td
+                class="align-top px-[24px] py-[18px] bg-[#F7F6F3] text-[14px] leading-[22px]"
+              >
+                <a
+                  href="IEL Assets/PDF/PATTERN OF SHAREHOLDING AS ON JUNE 30, 2026.pdf"
+                  target="_blank"
+                  class="font-[600] underline text-blue-600 hover:text-blue-800 transition"
                 >
-                  <a
-                    href="IEL Assets/PDF/PATTERN OF SHAREHOLDING AS ON JUNE 30, 2026.pdf"
-                    target="_blank"
-                    class="font-[600] underline text-blue-600 hover:text-blue-800 transition"
-                  >
-                    Pattern of Shareholding as on June 30, 2026
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                  Pattern of Shareholding as on June 30, 2026
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+  </div>
 
-    <!-------------------------Footer---------------------->
+  <!-------------------------Footer---------------------->
 
-    <Footer extra="mt-[80px]" />
-<script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"></script>
+  <Footer extra="mt-[80px]" />
+  <script
+    is:inline
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
 
-    <script is:inline src="index.js"></script>
-  
+  <script is:inline src="index.js"></script>
 </Layout>
