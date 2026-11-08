@@ -108,6 +108,24 @@ function getItemDate(item) {
   return item.date || parseDateFromTitle(item.title) || new Date(0);
 }
 
+// ────────────────────────────────────────────────
+// Financial year helpers
+// ────────────────────────────────────────────────
+// The financial year runs 1 July to 30 June and is named by the two calendar
+// years it spans: Jul 2026 - Jun 2027 is "FY 2026-27".
+
+// Returns the calendar year in which the financial year of `date` starts.
+// JavaScript months are 0-based: 6 = July.
+function fiscalYearStart(date) {
+  return date.getMonth() >= 6 ? date.getFullYear() : date.getFullYear() - 1;
+}
+
+// 2026 -> "FY 2026-27"
+function fiscalYearLabel(startYear) {
+  const endYY = String((startYear + 1) % 100).padStart(2, "0");
+  return `FY ${startYear}-${endYY}`;
+}
+
 function sortNewestFirst(items) {
   return items.slice().sort((a, b) => getItemDate(b) - getItemDate(a));
 }
@@ -202,116 +220,166 @@ async function downloadPdf(url, fileName, btn) {
   }
 }
 // ────────────────────────────────────────────────
-// Row rendering
+// Rendering: every tab is grouped by financial year (Jul-Jun), newest first.
+// Each year is a collapsible card holding a Description | PDF table.
 // ────────────────────────────────────────────────
-function createStatementRow(title, pdfUrl) {
-  const wrapper = document.createElement("div");
+const PDF_ICON =
+  '<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5zM14 3v5h5"></path></svg>';
 
-  const div = document.createElement("div");
-  div.className = "flex justify-between mt-[40px]";
+function createStatementRow(item) {
+  const tr = document.createElement("tr");
+  tr.className = "fs-row border-t border-[#ECECEC]";
+  tr.dataset.search = (item.title || "").toLowerCase();
 
-  const p = document.createElement("p");
-  p.className =
-    "w-[180px] sm:w-auto text-[16px] sm:text-[20px] leading-[24px] font-[600] text-[#000000E5]";
-  p.textContent = title || "Untitled Document";
+  const tdTitle = document.createElement("td");
+  tdTitle.className =
+    "px-4 md:px-6 py-4 text-[14px] md:text-[16px] font-[600] text-[#000000E5] align-top";
+  tdTitle.textContent = item.title || "Untitled Document";
 
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.className =
-    "download-btn text-[#EA5B29] font-[700] text-[16px] leading-[24px] cursor-pointer disabled:opacity-60";
-  btn.textContent = "Download";
-  btn.dataset.file = pdfUrl || "";
-  btn.addEventListener("click", () =>
-    downloadPdf(pdfUrl, makeFileName(title, pdfUrl), btn),
-  );
+  const tdPdf = document.createElement("td");
+  tdPdf.className = "px-4 md:px-6 py-4 align-top text-right sm:text-left";
 
-  div.appendChild(p);
-  div.appendChild(btn);
+  const link = document.createElement("a");
+  link.className =
+    "inline-flex items-center gap-1.5 text-[#EA5B29] font-[700] text-[14px] md:text-[15px] hover:underline";
+  link.href = item.pdfUrl ? resolveUrl(item.pdfUrl) : "#";
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.innerHTML = PDF_ICON + "<span>View PDF</span>";
 
-  const hr = document.createElement("hr");
-  hr.className = "mt-[16px]";
-
-  wrapper.appendChild(div);
-  wrapper.appendChild(hr);
-
-  return wrapper;
+  tdPdf.appendChild(link);
+  tr.appendChild(tdTitle);
+  tr.appendChild(tdPdf);
+  return tr;
 }
 
-function renderSortedList(container, items) {
-  container.innerHTML = "";
-  sortNewestFirst(items).forEach((item) => {
-    container.appendChild(createStatementRow(item.title, item.pdfUrl));
-  });
-}
-
-// ────────────────────────────────────────────────
-// LCB accordion (grouped by year, newest year first & expanded)
-// ────────────────────────────────────────────────
-function renderLCBAccordion(container, items) {
-  container.innerHTML = "";
-
+function groupByFinancialYear(items) {
   const groups = {};
   items.forEach((item) => {
-    const year = getItemDate(item).getFullYear();
-    if (!groups[year]) groups[year] = [];
-    groups[year].push(item);
+    const d = getItemDate(item);
+    if (d.getTime() === 0) {
+      console.warn("Statement title has no readable year:", item.title);
+    }
+    const year = fiscalYearStart(d);
+    (groups[year] = groups[year] || []).push(item);
+  });
+  return groups;
+}
+
+function applySearch(container, query) {
+  const q = query.trim().toLowerCase();
+  let anyVisible = false;
+
+  container.querySelectorAll(".fs-section").forEach((section) => {
+    const label = section.dataset.label.toLowerCase();
+    const sectionMatches = q && label.includes(q);
+    let visibleRows = 0;
+
+    section.querySelectorAll(".fs-row").forEach((row) => {
+      const show = !q || sectionMatches || row.dataset.search.includes(q);
+      row.classList.toggle("hidden", !show);
+      if (show) visibleRows++;
+    });
+
+    section.classList.toggle("hidden", visibleRows === 0);
+    if (visibleRows > 0) anyVisible = true;
+
+    const panel = section.querySelector(".fs-panel");
+    const chevron = section.querySelector(".fs-chevron");
+    if (q && visibleRows > 0) {
+      panel.classList.remove("hidden");
+      chevron.classList.add("rotate-180");
+    } else if (!q) {
+      const open = section.dataset.defaultOpen === "1";
+      panel.classList.toggle("hidden", !open);
+      chevron.classList.toggle("rotate-180", open);
+    }
+    const count = section.querySelector(".fs-count");
+    count.textContent = `${visibleRows} document${visibleRows === 1 ? "" : "s"}`;
   });
 
+  const empty = container.querySelector(".fs-empty");
+  if (empty) empty.classList.toggle("hidden", anyVisible);
+}
+
+function renderTab(contentId, tabValue, items) {
+  const container = document.getElementById(contentId);
+  if (!container) return;
+  container.innerHTML = "";
+
+  // Search box
+  const searchWrap = document.createElement("div");
+  searchWrap.className =
+    "mb-4 p-3 md:p-4 border border-[#ECECEC] rounded-[12px] bg-white";
+  const input = document.createElement("input");
+  input.type = "search";
+  input.placeholder = "Search by title or year (e.g. 2026-27)...";
+  input.setAttribute("aria-label", "Search financial statements");
+  input.className =
+    "w-full sm:w-[340px] px-3 py-2 text-[14px] border border-[#ECECEC] rounded-[8px] bg-[#FAFAFA] outline-none focus:border-[#EA5B29]";
+  searchWrap.appendChild(input);
+  container.appendChild(searchWrap);
+
+  const groups = groupByFinancialYear(items);
   const years = Object.keys(groups).sort((a, b) => b - a);
 
   years.forEach((year, index) => {
     const yearItems = sortNewestFirst(groups[year]);
-    const isOpen = index === 0; // most recent year starts expanded
+    const isOpen = index === 0; // newest year starts expanded
+    const label = fiscalYearLabel(Number(year));
 
     const section = document.createElement("div");
     section.className =
-      "mb-4 border border-[#ECECEC] rounded-[12px] overflow-hidden";
+      "fs-section mb-4 border border-[#ECECEC] rounded-[12px] overflow-hidden bg-white";
+    section.dataset.label = label;
+    section.dataset.defaultOpen = isOpen ? "1" : "0";
 
     const header = document.createElement("button");
     header.type = "button";
     header.className =
-      "w-full flex justify-between items-center px-4 py-4 md:px-6 md:py-5 bg-[#FAFAFA] hover:bg-[#F4F4F4] transition text-left";
+      "w-full flex justify-between items-center px-4 py-4 md:px-6 bg-[#FAFAFA] hover:bg-[#F4F4F4] transition text-left";
     header.innerHTML = `
-      <span class="text-[24px] md:text-[32px] font-[700]">FY ${year}</span>
-      <svg
-        class="lcb-chevron w-5 h-5 md:w-6 md:h-6 shrink-0 transform transition-transform duration-200 ${
-          isOpen ? "rotate-180" : ""
-        }"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
+      <span class="flex items-baseline gap-3">
+        <span class="text-[18px] md:text-[20px] font-[700]">${label}</span>
+        <span class="fs-count text-[13px] text-[#00000099]">${yearItems.length} document${yearItems.length === 1 ? "" : "s"}</span>
+      </span>
+      <svg class="fs-chevron w-5 h-5 shrink-0 transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    `;
+      </svg>`;
 
     const panel = document.createElement("div");
-    panel.className = `lcb-panel px-4 md:px-6 pb-2 ${isOpen ? "" : "hidden"}`;
+    panel.className = `fs-panel overflow-x-auto ${isOpen ? "" : "hidden"}`;
 
-    yearItems.forEach((item) => {
-      panel.appendChild(createStatementRow(item.title, item.pdfUrl));
-    });
+    const table = document.createElement("table");
+    table.className = "w-full text-left";
+    table.innerHTML = `
+      <thead>
+        <tr class="text-[12px] uppercase tracking-wide text-[#00000099]">
+          <th class="px-4 md:px-6 py-3 font-[700]">Description</th>
+          <th class="px-4 md:px-6 py-3 font-[700] text-right sm:text-left">PDF</th>
+        </tr>
+      </thead>`;
+    const tbody = document.createElement("tbody");
+    yearItems.forEach((item) => tbody.appendChild(createStatementRow(item)));
+    table.appendChild(tbody);
+    panel.appendChild(table);
 
     header.addEventListener("click", () => {
       panel.classList.toggle("hidden");
-      header.querySelector(".lcb-chevron").classList.toggle("rotate-180");
+      header.querySelector(".fs-chevron").classList.toggle("rotate-180");
     });
 
     section.appendChild(header);
     section.appendChild(panel);
     container.appendChild(section);
   });
-}
 
-function renderTab(contentId, tabValue, items) {
-  const container = document.getElementById(contentId);
-  if (!container) return;
+  const empty = document.createElement("p");
+  empty.className = `fs-empty text-[14px] text-[#00000099] py-6 text-center ${years.length ? "hidden" : ""}`;
+  empty.textContent = "No documents found.";
+  container.appendChild(empty);
 
-  if (tabValue === "LCB") {
-    renderLCBAccordion(container, items);
-  } else {
-    renderSortedList(container, items);
-  }
+  input.addEventListener("input", () => applySearch(container, input.value));
 }
 
 // ────────────────────────────────────────────────
@@ -368,13 +436,23 @@ function initSupabase() {
 
 initSupabase();
 
+// "2026-07-01" -> local-time Date. new Date("2026-07-01") would read it as
+// midnight UTC, which is 30 June for visitors west of UTC and would move the
+// document into the previous financial year.
+function parseStatementDate(value) {
+  if (!value) return null;
+  const [y, m, d] = String(value).slice(0, 10).split("-").map(Number);
+  if (!y || !m || !d) return null;
+  return new Date(y, m - 1, d);
+}
+
 function mapSupabaseItem(item) {
   return {
     title: item.short_des,
     pdfUrl: item.pdf,
     // Prefer a real date column if one exists (e.g. a future
     // "statement_date" field) — falls back to parsing short_des otherwise.
-    date: item.statement_date ? new Date(item.statement_date) : null,
+    date: parseStatementDate(item.statement_date),
   };
 }
 
