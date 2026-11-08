@@ -223,28 +223,13 @@ async function downloadPdf(url, fileName, btn) {
 // Rendering: every tab is grouped by financial year (Jul-Jun), newest first.
 // Each year is a collapsible card holding a Description | PDF table.
 // ────────────────────────────────────────────────
-function fileNameFromUrl(url) {
-  if (!url) return "";
-  let name = url.split("?")[0].split("/").pop();
-  try {
-    name = decodeURIComponent(name);
-  } catch (e) {}
-  // Uploads are stored as "<timestamp>-<original name>.pdf". The prefix is for
-  // internal use only, so hide it from visitors (display and search).
-  return name.replace(/^\d{10,}[-_ ]+/, "");
-}
-
 const PDF_ICON =
   '<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5zM14 3v5h5"></path></svg>';
 
 function createStatementRow(item) {
   const tr = document.createElement("tr");
   tr.className = "fs-row border-t border-[#ECECEC]";
-  tr.dataset.search = (
-    (item.title || "") +
-    " " +
-    fileNameFromUrl(item.pdfUrl)
-  ).toLowerCase();
+  tr.dataset.search = (item.title || "").toLowerCase();
 
   const tdTitle = document.createElement("td");
   tdTitle.className =
@@ -262,13 +247,7 @@ function createStatementRow(item) {
   link.rel = "noopener";
   link.innerHTML = PDF_ICON + "<span>View PDF</span>";
 
-  const name = document.createElement("div");
-  name.className =
-    "hidden sm:block mt-1 text-[12px] text-[#00000099] break-all";
-  name.textContent = fileNameFromUrl(item.pdfUrl);
-
   tdPdf.appendChild(link);
-  tdPdf.appendChild(name);
   tr.appendChild(tdTitle);
   tr.appendChild(tdPdf);
   return tr;

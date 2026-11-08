@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.5.1 — 2026-11-08
+
+- Financial Statements page: removed the filename shown under "View PDF" for a tidier table; search now matches title and year only.
+- Cache-busting tag for `supabaseFinancialStatements.js` bumped to `?v=6`.
+- `package-lock.json` version synced with `package.json`.
+
 ## v2.5.0 — 2026-11-08
 
 - Financial Statements page: every tab (Audited, Half Yearly, Quarter Ended 30 Sept / 31 March, LCB) is now grouped by financial year (Jul-Jun, e.g. "FY 2026-27"), newest first, in collapsible cards with a Description | PDF table and a search box.
